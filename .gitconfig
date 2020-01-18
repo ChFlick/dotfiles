@@ -1,0 +1,18 @@
+[user]
+	name = Christoph Flick
+	email = christophflick@gmx.de
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[core]
+	editor = vim
+[alias]
+	c = commit
+	s = status -s
+	st = status
+	f = fetch
+	amend = commit --amend
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+	unstage = reset HEAD
+
