@@ -1,18 +1,23 @@
 [user]
 	name = Christoph Flick
 	email = christophflick@gmx.de
+    signingkey = D772CEE835FEDF07
 [diff]
 	tool = meld
 [merge]
 	tool = meld
+[commit]
+    gpgsign = true
 [core]
 	editor = vim
 [alias]
+	amend = commit --amend
+    b = branch
 	c = commit
+	f = fetch
+    r = restore
 	s = status -s
 	st = status
-	f = fetch
-	amend = commit --amend
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 	unstage = reset HEAD
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 
