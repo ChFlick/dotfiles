@@ -18,6 +18,7 @@
     r = restore
 	s = status -s
 	st = status
+    sw = switch
 	unstage = reset HEAD
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 
