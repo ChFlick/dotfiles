@@ -11,6 +11,7 @@ avahi
 b43-fwcutter
 baobab
 bash
+biber
 bind-tools
 binutils
 bison
@@ -240,6 +241,7 @@ ntp
 numlockx
 nvm
 okular
+onedrive-abraunegg
 openresolv
 openssh
 os-prober
