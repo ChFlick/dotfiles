@@ -326,6 +326,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+texlive-tikz-uml
 thunar-archive-plugin-gtk3
 thunar-gtk3
 thunar-media-tags-plugin
