@@ -1,24 +1,26 @@
 [user]
-	name = Christoph Flick
-	email = christophflick@gmx.de
+    name = Christoph Flick
+    email = ChFlick@users.noreply.github.com
     signingkey = D772CEE835FEDF07
 [diff]
-	tool = meld
+    tool = meld
 [merge]
-	tool = meld
+    tool = meld
 [commit]
     gpgsign = true
 [core]
-	editor = vim
+    editor = vim
 [alias]
-	amend = commit --amend
+    amend = commit --amend
     b = branch
-	c = commit
-	f = fetch
+    c = commit
+    f = fetch
     r = restore
-	s = status -s
-	st = status
+    s = status -s
+    st = status
     sw = switch
-	unstage = reset HEAD
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+    unstage = reset HEAD                                                                                      
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 
+[pull]
+	rebase = true
