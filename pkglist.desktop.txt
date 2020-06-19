@@ -174,9 +174,6 @@ linux-firmware
 linux-latest
 linux-latest-nvidia-430xx
 linux-latest-r8168
-linux55
-linux55-nvidia-430xx
-linux55-r8168
 linux56
 linux56-nvidia-430xx
 linux56-r8168
@@ -215,7 +212,7 @@ mesa-demos
 mhwd
 mhwd-db
 mhwd-tui
-microsoft-office-online-jak
+microsoft-office-web-jak
 mkinitcpio-openswap
 mobile-broadband-provider-info
 modemmanager
@@ -345,11 +342,15 @@ ttf-dejavu
 ttf-droid
 ttf-inconsolata
 ttf-indic-otf
+ttf-iosevka
+ttf-iosevka-aile
+ttf-iosevka-sparkle
 ttf-joypixels
 ttf-liberation
 ttf-ms-fonts
 ttf-roboto
 uget
+umbrello
 unace
 undistract-me-git
 unicode-emoji
@@ -357,6 +358,7 @@ unrar
 usb_modeswitch
 usbutils
 util-linux
+veracrypt
 vi
 vim
 vim-gruvbox-git
