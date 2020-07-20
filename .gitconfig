@@ -1,26 +1,26 @@
 [user]
-    name = Christoph Flick
-    email = ChFlick@users.noreply.github.com
-    signingkey = D772CEE835FEDF07
+	name = Christoph Flick
+	email = ChFlick@users.noreply.github.com 
+	signingkey = C6EC05F2B122A3CE 
 [diff]
-    tool = meld
+	tool = meld
 [merge]
-    tool = meld
-[commit]
-    gpgsign = true
+	tool = meld
 [core]
-    editor = vim
+	editor = vim
 [alias]
-    amend = commit --amend
-    b = branch
-    c = commit
-    f = fetch
-    r = restore
-    s = status -s
-    st = status
+	c = commit
+    co-pr = !sh -c 'git fetch $1 pull/$2/head:pr/$2 && git switch pr/$2' -
+	s = status -s
+	st = status
+    sub = submodule update --init --recursive
     sw = switch
-    unstage = reset HEAD                                                                                      
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+	f = fetch
+	amend = commit --amend
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+	unstage = reset HEAD
 
+[commit]
+	gpgsign = true
 [pull]
 	rebase = true
