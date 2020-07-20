@@ -40,7 +40,6 @@ dmraid
 dnsmasq
 docker
 docker-compose
-docker-machine-driver-kvm2
 dosfstools
 e2fsprogs
 ebook-tools
@@ -57,7 +56,6 @@ file
 file-roller
 filesystem
 findutils
-firefox
 fish
 flatpak
 flex
@@ -161,6 +159,7 @@ jmstoolbox
 jre8-openjdk
 jre8-openjdk-headless
 kernel-alive
+kolourpaint
 kubectl
 less
 lib32-mesa-demos
@@ -264,6 +263,7 @@ pciutils
 peek
 perl
 plank
+plantuml
 polkit-gnome
 postgresql
 postgresql-libs
