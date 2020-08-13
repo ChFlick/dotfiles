@@ -5,7 +5,6 @@ alsa-firmware
 alsa-utils
 anki
 arandr
-archlinux-java-run
 autoconf
 automake
 avahi
@@ -61,6 +60,7 @@ fish
 flashplugin
 flatpak
 flex
+flyway
 fprintd
 gawk
 gcc
@@ -149,7 +149,7 @@ iptables
 iputils
 ipw2100-fw
 ipw2200-fw
-jabref-git
+jabref
 jdk-openjdk
 jfsutils
 jmeter
@@ -176,6 +176,7 @@ linux-firmware
 linux-latest
 linux56
 linux57
+lnav
 logrotate
 lollypop
 lrzip
@@ -224,6 +225,7 @@ mplayer
 mps-youtube-git
 mpv
 mssql-tools
+mudlet
 mutter
 namcap
 nano
@@ -312,6 +314,7 @@ systemd-fsck-silent
 systemd-swap
 systemd-sysvcompat
 tar
+telegram-desktop
 telepathy-accounts-signon
 terminus-font
 texinfo
