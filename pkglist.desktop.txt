@@ -5,6 +5,7 @@ adobe-base-14-fonts
 adwaita-icon-theme
 alsa-firmware
 alsa-utils
+aseprite
 audacity
 autoconf
 automake
@@ -13,7 +14,7 @@ b43-fwcutter
 baobab
 bash
 biber
-bind-tools
+bind
 binutils
 bison
 blueman
@@ -72,7 +73,6 @@ ghc
 ghc-libs
 ghc-static
 git-lfs
-gitahead-bin
 gitflow-avh
 glibc
 gnome-backgrounds
@@ -106,6 +106,7 @@ gnome-user-docs
 gnome-user-share
 gnome-wallpapers
 gnome-weather
+godot-bin
 gparted
 gradle
 grep
@@ -148,7 +149,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 ipython
-jabref-git
+jabref
 java-openjfx
 jdk-openjdk
 jdk11-graalvm-bin
@@ -160,6 +161,7 @@ jre8-openjdk
 jre8-openjdk-headless
 kernel-alive
 kolourpaint
+krita
 kubectl
 less
 lib32-mesa-demos
@@ -173,13 +175,11 @@ linux-firmware
 linux-latest
 linux-latest-nvidia-430xx
 linux-latest-r8168
-linux56
-linux56-nvidia-430xx
-linux56-r8168
 logrotate
 lollypop
 lrzip
 lsb-release
+lua53
 lvm2
 make
 man-db
@@ -219,6 +219,7 @@ mono
 mousetweaks
 mps-youtube
 mssql-tools
+mudlet
 mutter
 nano
 native-image-jdk11-bin
@@ -265,7 +266,6 @@ perl
 plank
 plantuml
 polkit-gnome
-postgresql
 postgresql-libs
 postman-bin
 powertop
@@ -307,6 +307,7 @@ sysfsutils
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+telegram-desktop
 telepathy-accounts-signon
 terminus-font
 tex-gyre-fonts
