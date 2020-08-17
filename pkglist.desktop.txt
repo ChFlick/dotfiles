@@ -48,6 +48,7 @@ ebtables
 ecryptfs-utils
 efibootmgr
 empathy
+espanso
 evince
 evolution
 exfat-utils
@@ -179,7 +180,6 @@ logrotate
 lollypop
 lrzip
 lsb-release
-lua53
 lvm2
 make
 man-db
@@ -245,6 +245,7 @@ ntp
 numlockx
 nvidia-430xx-utils
 nvm
+obsidian-appimage
 octave
 okular
 openapi-generator-cli
@@ -350,6 +351,7 @@ ttf-joypixels
 ttf-liberation
 ttf-ms-fonts
 ttf-roboto
+typora
 uget
 umbrello
 unace
