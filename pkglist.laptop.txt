@@ -46,6 +46,7 @@ ebtables
 ecryptfs-utils
 efibootmgr
 elementary-planner-git
+espanso-bin
 etcher
 evince
 evolution
