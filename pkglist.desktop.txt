@@ -285,6 +285,7 @@ python-scipy
 python-selenium
 python-sympy
 qemu-headless
+ranger
 raw-thumbnailer
 rbenv
 redis
@@ -296,7 +297,6 @@ sed
 shadow
 simple-scan
 slack-desktop
-soapui
 spectre-meltdown-checker
 spotify
 stack
