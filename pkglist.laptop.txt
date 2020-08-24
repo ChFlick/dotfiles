@@ -59,6 +59,7 @@ file-roller
 filesystem
 findutils
 firebase-tools
+firefox
 fish
 flashplugin
 flatpak
@@ -288,6 +289,7 @@ pulseaudio-ctl
 pulseaudio-zeroconf
 python-pylast
 qemu-headless
+ranger
 raw-thumbnailer
 rbenv
 rbenv-binstubs
@@ -300,6 +302,7 @@ rtv
 s-nail
 seahorse
 sed
+sentry-cli-bin
 shadow
 simple-scan
 skypeforlinux-stable-bin
