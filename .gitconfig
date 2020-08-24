@@ -1,7 +1,3 @@
-[user]
-	name = Christoph Flick
-	email = ChFlick@users.noreply.github.com 
-	signingkey = C6EC05F2B122A3CE 
 [diff]
 	tool = meld
 [merge]
@@ -25,3 +21,6 @@
 	gpgsign = true
 [pull]
 	rebase = true
+
+[include]
+    path = .gitconfig.local 

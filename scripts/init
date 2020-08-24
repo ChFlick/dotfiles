@@ -1,0 +1,44 @@
+#!/bin/bash
+GITCONFIG=$HOME/.gitconfig
+GITCONFIG_LOCAL=$HOME/.gitconfig.local
+DOTFILES=`readlink -f $PWD/..`
+DF_GITCONFIG=$DOTFILES/.gitconfig
+DF_GITCONFIG_LOCAL_DEFAULT=$DOTFILES/.gitconfig.local.default
+
+FISH_CONFIG=$HOME/.config/fish/config.fish
+DF_FISH_ALIASES=$DOTFILES/aliases.fish
+DF_FISH_CONFIG=$DOTFILES/config.fish
+
+read -n 1 -p "Do you want to link ~/.gitconfig to ./.gitconfig? [Y/n]"
+echo
+if [[ $REPLY =~ ^[yY]?$ ]]; then
+    doLink=true
+    if [ -f $GITCONFIG ]; then
+        doLink=false
+        read -n 1 -p "$GITCONFIG already exists. Do you want to override it? [y/N]"
+        echo
+        if [[ $REPLY =~ ^[yY]?$ ]]; then
+            doLink=true
+        fi
+    fi
+    
+    if $doLink; then
+        ln -f -s $DF_GITCONFIG $GITCONFIG
+        echo "Linked gitconfig"
+        read -n 1 -p "Do you want to add a default ~/.gitconfig.local? [Y/n]" 
+        echo
+        if [[ $REPLY =~ ^[yY]?$ ]]; then
+            cp -f $DF_GITCONFIG_LOCAL_DEFAULT $GITCONFIG_LOCAL
+            echo "Copied $DF_GITCONFIG_LOCAL_DEFAULT to $GITCONFIG_LOCAL"
+            echo "Remeber to change the gpgsigningkey"
+        fi    
+    fi
+fi
+
+read -n 1 -p "Do you want to include the dotfiles fish conifg in your local fish conifg? [Y/n]"
+echo
+if [[ $REPLY =~ ^[yY]?$ ]]; then
+    echo ". $DF_FISH_ALIASES" >> $FISH_CONFIG
+    echo ". $DF_FISH_CONFIG" >> $FISH_CONFIG
+    echo "Appended two lines to $FISH_CONFIG"
+fi

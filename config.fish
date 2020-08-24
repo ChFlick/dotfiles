@@ -11,6 +11,3 @@ nvm use default --silent
 set -x PATH $HOME/.rbenv/bin $PATH
 rbenv init - | source
 
-alias dcu="docker-compose up"
-alias dcd="docker-compose down" 
-alias dcs="docker-compose stop"
