@@ -136,6 +136,7 @@ gvfs-smb
 gzip
 haveged
 helm
+highlight
 hnwatch
 htop
 httpie
@@ -209,6 +210,7 @@ manjaro-wallpapers-18.0
 maven
 mc
 mdadm
+mediainfo
 meld
 memtest86+
 mesa-demos
@@ -289,6 +291,7 @@ pulseaudio-ctl
 pulseaudio-zeroconf
 python-pylast
 qemu-headless
+qutebrowser
 ranger
 raw-thumbnailer
 rbenv
@@ -359,6 +362,7 @@ ttf-roboto
 ttf-roboto-mono
 tumbler
 typora
+ueberzug
 uget
 umbrello
 unace
