@@ -4,3 +4,5 @@ alias dcs="docker-compose stop"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias tm="gnome-system-monitor"
+
