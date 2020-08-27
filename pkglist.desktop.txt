@@ -47,6 +47,7 @@ ebook-tools
 ebtables
 ecryptfs-utils
 efibootmgr
+elementary-planner-git
 empathy
 espanso
 evince
