@@ -49,10 +49,10 @@ elementary-planner-git
 espanso-bin
 etcher
 evince
-evolution
 exfat-utils
 f2fs-tools
 fakeroot
+fd
 ffmpegthumbnailer
 file
 file-roller
@@ -61,7 +61,6 @@ findutils
 firebase-tools
 firefox
 fish
-flashplugin
 flatpak
 flex
 flyway
@@ -91,7 +90,6 @@ gnome-epub-thumbnailer
 gnome-font-viewer
 gnome-getting-started-docs
 gnome-keyring
-gnome-maps
 gnome-notes
 gnome-online-accounts
 gnome-screenshot
@@ -138,10 +136,12 @@ haveged
 helm
 highlight
 hnwatch
+howdy
 htop
 httpie
 hugo
 hunspell-en_US
+i3-gaps
 illyria-wallpaper
 imagewriter
 inetutils
@@ -180,6 +180,7 @@ licenses
 linux-firmware
 linux-latest
 linux57
+linux58
 lnav
 logrotate
 lollypop
@@ -220,11 +221,12 @@ mhwd-db
 mhwd-tui
 microsoft-office-web-jak
 minikube
-mininet
 mkinitcpio-openswap
 mlocate
 mobile-broadband-provider-info
 modemmanager
+mongodb-compass
+mongodb-shell-bin
 mousetweaks
 mplayer
 mps-youtube-git
@@ -238,6 +240,7 @@ nautilus
 nautilus-admin
 nautilus-empty-file
 ncdu
+neofetch
 net-tools
 netctl
 networkmanager
@@ -274,7 +277,6 @@ patch
 pavucontrol
 pciutils
 peek
-pepper-flash
 perl
 pinta
 plank
@@ -291,7 +293,6 @@ pulseaudio-ctl
 pulseaudio-zeroconf
 python-pylast
 qemu-headless
-qutebrowser
 ranger
 raw-thumbnailer
 rbenv
@@ -315,10 +316,10 @@ spectre-meltdown-checker
 spotify
 sqlite-analyzer
 stack
-staruml
 steam-manjaro
 sudo
 sushi
+sway
 sysfsutils
 systemd-fsck-silent
 systemd-swap
@@ -340,6 +341,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+the_silver_searcher
 thunar-archive-plugin-gtk3
 thunar-gtk3
 thunar-volman-gtk3
