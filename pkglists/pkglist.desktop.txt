@@ -1,6 +1,7 @@
 aaxtomp3
 acpi
 acpid
+activitywatch-bin
 adobe-base-14-fonts
 adwaita-icon-theme
 alsa-firmware
@@ -54,6 +55,7 @@ evince
 evolution
 exfat-utils
 f2fs-tools
+fd
 ffmpegthumbnailer
 file
 file-roller
@@ -89,7 +91,6 @@ gnome-disk-utility
 gnome-font-viewer
 gnome-getting-started-docs
 gnome-keyring
-gnome-maps
 gnome-notes
 gnome-online-accounts
 gnome-screenshot
@@ -133,6 +134,7 @@ gvfs-smb
 gzip
 haveged
 helm-synth
+heroku-cli
 hexchat
 htop
 httpie
@@ -142,6 +144,7 @@ illyria-wallpaper
 imagewriter
 inetutils
 inkscape
+insomnia
 intel-ucode
 intellij-idea-ultimate-edition
 inxi
@@ -162,6 +165,7 @@ jmstoolbox
 jre8-openjdk
 jre8-openjdk-headless
 kernel-alive
+kitty
 kolourpaint
 krita
 kubectl
@@ -183,6 +187,7 @@ lrzip
 lsb-release
 lvm2
 make
+makemkv
 man-db
 man-pages
 manjaro-alsa
@@ -216,6 +221,8 @@ microsoft-office-web-jak
 mkinitcpio-openswap
 mobile-broadband-provider-info
 modemmanager
+mongodb-compass
+mongodb-shell-bin
 mono
 mousetweaks
 mps-youtube
@@ -239,6 +246,7 @@ networkmanager-vpnc
 nfs-utils
 ngrok
 nodejs-nearley
+nodejs-nestjs-cli
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
@@ -269,7 +277,6 @@ plank
 plantuml
 polkit-gnome
 postgresql-libs
-postman-bin
 powertop
 procps-ng
 psmisc
@@ -340,6 +347,7 @@ tracker
 tracker-miners
 transmission-gtk
 tree
+ts-node
 ttf-bitstream-vera
 ttf-dejavu
 ttf-droid
@@ -352,6 +360,7 @@ ttf-joypixels
 ttf-liberation
 ttf-ms-fonts
 ttf-roboto
+typescript
 typora
 uget
 umbrello
