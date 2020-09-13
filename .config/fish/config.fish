@@ -1,3 +1,5 @@
+. ~/.config/fish/aliases.fish
+
 set -gx NVM_DIR /usr/share/nvm
 #set -U fish_user_paths (ruby -e 'print Gem.user_dir')/bin $fish_user_paths
 
