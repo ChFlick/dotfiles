@@ -6,4 +6,4 @@ Target = *
 
 [Action]
 When = PostTransaction
-Exec = /bin/fish -c '/usr/bin/pacman -Qqe > $HOME/pkglists/pkglist.$DOTFILES_DEVICE_ID.txt'
+Exec = /usr/bin/sudo -u chris /usr/bin/env /bin/fish -c '/usr/bin/pacman -Qqe > $HOME/pkglists/pkglist.$DOTFILES_DEVICE_ID.txt'
