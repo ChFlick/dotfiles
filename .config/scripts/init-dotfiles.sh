@@ -23,7 +23,7 @@ if [ ! -f $FISHCONFIG_LOCAL ]; then
     echo "There is currently no local fish config. Creating one..."
 
     touch $FISHCONFIG_LOCAL
-    echo "set -X DOTFILES_DEVICE_ID '$device_id'" >> $FISHCONFIG_LOCAL
+    echo "set -x DOTFILES_DEVICE_ID '$device_id'" >> $FISHCONFIG_LOCAL
     echo "$FISHCONFIG_LOCAL created and DOTFILES_DEVICE_ID set to environment"
 fi
 
