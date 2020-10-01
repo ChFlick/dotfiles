@@ -1,6 +1,7 @@
 . ~/.config/fish/aliases.fish
 . ~/.config/fish/config.local.fish
 
+set -gx MAKEFLAGS '-j8'
 set -gx NVM_DIR /usr/share/nvm
 #set -U fish_user_paths (ruby -e 'print Gem.user_dir')/bin $fish_user_paths
 
