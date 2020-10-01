@@ -6,6 +6,7 @@ adobe-base-14-fonts
 adwaita-icon-theme
 alsa-firmware
 alsa-utils
+asciinema
 aseprite
 audacity
 autoconf
@@ -43,6 +44,7 @@ dnsmasq
 docker
 docker-compose
 dosfstools
+drawio-desktop-bin
 e2fsprogs
 ebook-tools
 ebtables
@@ -61,6 +63,7 @@ file
 file-roller
 filesystem
 findutils
+firefox
 fish
 flatpak
 flex
@@ -80,6 +83,7 @@ git-lfs
 gitflow-avh
 glibc
 gnome-backgrounds
+gnome-break-timer
 gnome-calculator
 gnome-calendar
 gnome-characters
@@ -142,6 +146,7 @@ hugo
 hunspell-en_US
 illyria-wallpaper
 imagewriter
+img2pdf
 inetutils
 inkscape
 insomnia
@@ -223,6 +228,7 @@ mobile-broadband-provider-info
 modemmanager
 mongodb-compass
 mongodb-shell-bin
+mongodb-tools-bin
 mono
 mousetweaks
 mps-youtube
@@ -271,6 +277,7 @@ patch
 pavucontrol
 pavucontrol-qt
 pciutils
+pdfarranger
 peek
 perl
 plank
@@ -318,6 +325,7 @@ systemd-sysvcompat
 tar
 telegram-desktop
 telepathy-accounts-signon
+termdown
 terminus-font
 tex-gyre-fonts
 texinfo
@@ -377,6 +385,7 @@ vim
 vim-gruvbox-git
 vino
 visual-studio-code-bin
+vsce
 wallpapers-2018
 wget
 which
