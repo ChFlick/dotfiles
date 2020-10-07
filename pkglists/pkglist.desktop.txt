@@ -48,6 +48,7 @@ drawio-desktop-bin
 e2fsprogs
 ebook-tools
 ebtables
+eclipse-jee
 ecryptfs-utils
 efibootmgr
 elementary-planner-git
@@ -83,7 +84,6 @@ git-lfs
 gitflow-avh
 glibc
 gnome-backgrounds
-gnome-break-timer
 gnome-calculator
 gnome-calendar
 gnome-characters
