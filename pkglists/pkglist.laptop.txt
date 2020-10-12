@@ -39,7 +39,6 @@ dmraid
 dnsmasq
 docker
 docker-compose
-docker-machine-driver-kvm2
 dosfstools
 e2fsprogs
 ebtables
@@ -283,7 +282,6 @@ plank
 polkit-gnome
 postgresql
 postgresql-libs
-postman-bin
 powertop
 procps-ng
 psmisc
@@ -318,6 +316,7 @@ sqlite-analyzer
 stack
 steam-manjaro
 sudo
+sumo
 sushi
 sway
 sysfsutils
@@ -385,6 +384,7 @@ vulkan-radeon
 wallpapers-2018
 wget
 which
+wine-gecko
 wireshark-qt
 wpa_supplicant
 xdg-su
