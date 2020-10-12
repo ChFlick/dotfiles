@@ -22,6 +22,12 @@ alias tm "gnome-system-monitor"
 alias c clear
 alias vi vim
 
+# Notes
+alias notes "git -C $HOME/Documents/notes"
+alias notepl "git -C $HOME/Documents/notes pull"
+alias noteps "git -C $HOME/Documents/notes push"
+alias noteup "notepl && noteps"
+
 alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dof dotfiles
 
