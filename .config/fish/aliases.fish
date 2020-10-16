@@ -18,6 +18,9 @@ alias .... "cd ../../.."
 # Tools
 alias tm "gnome-system-monitor"
 
+# git
+alias gitp "git"
+
 # Util
 alias c clear
 alias vi vim

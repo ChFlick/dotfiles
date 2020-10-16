@@ -15,7 +15,8 @@
     st = status
     sub = submodule update --init --recursive                                                                                                                        
     sw = switch
-    unstage = reset HEAD                                                               
+    unstage = reset HEAD
+    ush = push                                                               
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 [commit]
 	gpgsign = true
