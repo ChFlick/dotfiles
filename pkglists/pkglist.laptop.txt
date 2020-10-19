@@ -230,7 +230,6 @@ mousetweaks
 mplayer
 mps-youtube-git
 mpv
-mssql-tools
 mudlet
 mutter
 namcap
