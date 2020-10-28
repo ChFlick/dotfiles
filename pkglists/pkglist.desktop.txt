@@ -6,6 +6,7 @@ adobe-base-14-fonts
 adwaita-icon-theme
 alsa-firmware
 alsa-utils
+anki
 asciinema
 aseprite
 audacity
@@ -24,6 +25,7 @@ bluez-utils
 brave
 btrfs-progs
 bzip2
+calibre-git
 chromium
 chromium-widevine
 coreutils
