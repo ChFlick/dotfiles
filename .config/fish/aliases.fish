@@ -24,6 +24,8 @@ alias gitp "git"
 # Util
 alias c clear
 alias vi vim
+alias whoowns "pacman -Qo"
+alias whocontains "pacman -F"
 
 # Notes
 alias notes "git -C $HOME/Documents/notes"
