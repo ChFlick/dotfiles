@@ -115,6 +115,7 @@ gnome-user-docs
 gnome-user-share
 gnome-wallpapers
 gnome-weather
+gobject-introspection
 godot-bin
 gparted
 gradle
@@ -294,6 +295,8 @@ pulseaudio-bluetooth
 pulseaudio-bluetooth-a2dp-gdm-fix
 pulseaudio-ctl
 pulseaudio-zeroconf
+python-beaker
+python-mako
 python-matplotlib
 python-nose
 python-numpy
