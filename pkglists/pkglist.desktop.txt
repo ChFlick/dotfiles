@@ -54,7 +54,6 @@ eclipse-jee
 ecryptfs-utils
 efibootmgr
 elementary-planner-git
-empathy
 espanso
 evince
 evolution
@@ -115,7 +114,6 @@ gnome-user-docs
 gnome-user-share
 gnome-wallpapers
 gnome-weather
-gobject-introspection
 godot-bin
 gparted
 gradle
@@ -152,7 +150,6 @@ imagewriter
 img2pdf
 inetutils
 inkscape
-insomnia
 intel-ucode
 intellij-idea-ultimate-edition
 inxi
@@ -162,6 +159,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 ipython
+iwd
 jabref
 java-openjfx
 jdk-openjdk
@@ -179,7 +177,7 @@ krita
 kubectl
 less
 lib32-mesa-demos
-lib32-nvidia-430xx-utils
+lib32-nvidia-455xx-utils
 libdvdcss
 libgda-postgres
 libreoffice-still
@@ -187,8 +185,13 @@ libvncserver
 licenses
 linux-firmware
 linux-latest
-linux-latest-nvidia-430xx
-linux-latest-r8168
+linux54-nvidia-455xx
+linux58
+linux58-nvidia-455xx
+linux58-r8168
+linux59
+linux59-nvidia-455xx
+linux59-r8168
 logrotate
 lollypop
 lrzip
@@ -261,12 +264,11 @@ nss-mdns
 ntfs-3g
 ntp
 numlockx
-nvidia-430xx-utils
+nvidia-455xx-utils
 nvm
 obsidian-appimage
 octave
 okular
-openapi-generator-cli
 openresolv
 openscenegraph
 openssh
@@ -292,11 +294,9 @@ powertop
 procps-ng
 psmisc
 pulseaudio-bluetooth
-pulseaudio-bluetooth-a2dp-gdm-fix
 pulseaudio-ctl
 pulseaudio-zeroconf
-python-beaker
-python-mako
+pycharm-professional
 python-matplotlib
 python-nose
 python-numpy
