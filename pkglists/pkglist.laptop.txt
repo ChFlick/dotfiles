@@ -230,7 +230,6 @@ mousetweaks
 mplayer
 mps-youtube-git
 mpv
-mudlet
 mutter
 namcap
 nano
@@ -285,9 +284,9 @@ powertop
 procps-ng
 psmisc
 pulseaudio-bluetooth
-pulseaudio-bluetooth-a2dp-gdm-fix
 pulseaudio-ctl
 pulseaudio-zeroconf
+pycharm-professional
 python-pylast
 qemu-headless
 ranger
