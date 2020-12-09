@@ -20,6 +20,13 @@ alias tm "gnome-system-monitor"
 
 # git
 alias gitp "git"
+function gitlist --description 'Toplist of edited files in git'
+    if count $argv    
+        git log --since="($argv[1]) days ago" --pretty=format:"" --name-only | grep "[^\s]" | sort | uniq -c | sort -nr | head -10    
+    else
+        git log --since="90 days ago" --pretty=format:"" --name-only | grep "[^\s]" | sort | uniq -c | sort -nr | head -10
+    end
+end
 
 # Util
 alias c clear
