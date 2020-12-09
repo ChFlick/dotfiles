@@ -39,7 +39,6 @@ device-mapper
 dhclient
 dhcpcd
 diffutils
-discord
 dmidecode
 dmraid
 dnsmasq
