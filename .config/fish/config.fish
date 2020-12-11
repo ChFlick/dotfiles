@@ -12,6 +12,3 @@ end
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
-set -x PATH $HOME/.rbenv/bin $PATH
-rbenv init - | source
-

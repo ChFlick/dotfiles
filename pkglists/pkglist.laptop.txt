@@ -291,8 +291,6 @@ python-pylast
 qemu-headless
 ranger
 raw-thumbnailer
-rbenv
-rbenv-binstubs
 recordmydesktop
 redis
 reiserfsprogs
