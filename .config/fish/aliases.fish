@@ -34,6 +34,8 @@ alias vi vim
 alias whoowns "pacman -Qo"
 alias whocontains "pacman -F"
 
+alias gnomeRestartPls "dbus-send --type=method_call --print-reply  --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'global.reexec_self()'"
+
 # Notes
 alias notes "git -C $HOME/Documents/notes"
 alias notepl "git -C $HOME/Documents/notes pull"
