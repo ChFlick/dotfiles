@@ -22,7 +22,6 @@ binutils
 bison
 blueman
 bluez-utils
-brave
 btrfs-progs
 bzip2
 calibre-git
@@ -49,7 +48,7 @@ drawio-desktop-bin
 e2fsprogs
 ebook-tools
 ebtables
-eclipse-jee
+eclipse-java-bin
 ecryptfs-utils
 efibootmgr
 elementary-planner-git
@@ -58,6 +57,7 @@ evince
 evolution
 exfat-utils
 f2fs-tools
+fakeroot
 fd
 ffmpegthumbnailer
 file
@@ -176,7 +176,7 @@ krita
 kubectl
 less
 lib32-mesa-demos
-lib32-nvidia-455xx-utils
+lib32-nvidia-utils
 libdvdcss
 libgda-postgres
 libreoffice-still
@@ -184,15 +184,15 @@ libvncserver
 licenses
 linux-firmware
 linux-latest
+linux510
+linux510-r8168
 linux54-nvidia-455xx
-linux58
-linux58-nvidia-455xx
-linux58-r8168
+linux54-r8168
 linux59
-linux59-nvidia-455xx
 linux59-r8168
 logrotate
 lollypop
+lostfiles
 lrzip
 lsb-release
 lvm2
@@ -285,6 +285,7 @@ pciutils
 pdfarranger
 peek
 perl
+pkgconf
 plank
 plantuml
 polkit-gnome
@@ -311,6 +312,7 @@ rbenv
 redis
 reiserfsprogs
 rsync
+rust
 s-nail
 seahorse
 sed
@@ -318,7 +320,9 @@ shadow
 simple-scan
 slack-desktop
 spectre-meltdown-checker
+speedreader
 spotify
+sqlite-analyzer
 stack
 steam-manjaro
 sudo
