@@ -40,6 +40,7 @@ dnsmasq
 docker
 docker-compose
 dosfstools
+droidcam
 e2fsprogs
 ebtables
 ecryptfs-utils
@@ -178,8 +179,8 @@ libva-vdpau-driver
 licenses
 linux-firmware
 linux-latest
-linux57
-linux58
+linux510
+linux510-headers
 lnav
 logrotate
 lollypop
@@ -369,6 +370,7 @@ unrar
 usb_modeswitch
 usbutils
 util-linux
+v4l2loopback-dkms
 vi
 vim
 vim-gruvbox-git
