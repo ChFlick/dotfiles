@@ -95,6 +95,7 @@ gnome-disk-utility
 gnome-font-viewer
 gnome-getting-started-docs
 gnome-keyring
+gnome-layout-switcher
 gnome-notes
 gnome-online-accounts
 gnome-screenshot
@@ -203,7 +204,6 @@ lollypop
 lostfiles
 lrzip
 lsb-release
-luarocks
 lvm2
 make
 makemkv
