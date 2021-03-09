@@ -17,6 +17,8 @@ alias .... "cd ../../.."
 
 # Tools
 alias tm "gnome-system-monitor"
+alias cursebreaker '/bin/bash -c "/mnt/48680A47680A33EA/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/CurseBreaker-linux"'
+alias owf aiksaurus
 
 # git
 alias gitp "git"
