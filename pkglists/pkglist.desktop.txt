@@ -4,6 +4,7 @@ acpid
 activitywatch-bin
 adobe-base-14-fonts
 adwaita-icon-theme
+aiksaurus
 alsa-firmware
 alsa-utils
 anki
@@ -175,10 +176,14 @@ kolourpaint
 krita
 kubectl
 less
+lib32-gamemode
 lib32-libva-vdpau-driver
 lib32-mesa-demos
 lib32-mesa-vdpau
+lib32-mpg123
 lib32-nvidia-utils
+lib32-v4l-utils
+lib32-vkd3d
 lib32-vulkan-intel
 lib32-vulkan-radeon
 libdvdcss
@@ -193,6 +198,9 @@ linux-latest
 linux510
 linux510-nvidia
 linux510-r8168
+linux511
+linux511-nvidia
+linux511-r8168
 linux54
 linux54-nvidia
 linux54-r8168
@@ -204,6 +212,7 @@ lollypop
 lostfiles
 lrzip
 lsb-release
+lutris
 lvm2
 make
 makemkv
@@ -319,6 +328,8 @@ raw-thumbnailer
 rbenv
 redis
 reiserfsprogs
+ripgrep
+rivalcfg
 rsync
 rust
 s-nail
@@ -341,6 +352,8 @@ sysfsutils
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+tdrop-git
+teamspeak3
 telegram-desktop
 telepathy-accounts-signon
 termdown
@@ -371,6 +384,7 @@ totem
 traceroute
 tracker
 tracker-miners
+translate-shell
 transmission-gtk
 tree
 ts-node
@@ -386,6 +400,7 @@ ttf-joypixels
 ttf-liberation
 ttf-ms-fonts
 ttf-roboto
+ttf-roboto-mono
 typescript
 typora
 uget
@@ -403,12 +418,17 @@ vim
 vim-gruvbox-git
 vino
 visual-studio-code-bin
+vkd3d
 vsce
 vulkan-intel
 vulkan-radeon
 wallpapers-2018
 wget
 which
+wine-gecko
+wine-mono
+wine-staging
+wmutils
 wpa_supplicant
 xdg-su
 xdg-user-dirs
