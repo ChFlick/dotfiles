@@ -1,3 +1,4 @@
+aaxtomp3
 acpi
 acpid
 adwaita-icon-theme
@@ -41,6 +42,7 @@ docker
 docker-compose
 dosfstools
 droidcam
+dxvk-bin
 e2fsprogs
 ebtables
 ecryptfs-utils
@@ -181,6 +183,8 @@ linux-firmware
 linux-latest
 linux510
 linux510-headers
+linux511
+linux511-headers
 lnav
 logrotate
 lollypop
@@ -348,6 +352,7 @@ totem
 tracker
 tracker-miners
 transmission-gtk
+tree
 ttf-bitstream-vera
 ttf-dejavu
 ttf-droid
@@ -377,12 +382,15 @@ vim-gruvbox-git
 vino
 visual-studio-code-bin
 visualvm
+vkd3d
 vulkan-intel
+vulkan-mesa-layers
 vulkan-radeon
 wallpapers-2018
 wget
 which
 wine-gecko
+wine-staging
 wireshark-qt
 wpa_supplicant
 xdg-su
