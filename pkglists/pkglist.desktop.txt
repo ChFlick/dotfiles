@@ -1,7 +1,6 @@
 aaxtomp3
 acpi
 acpid
-activitywatch-bin
 adobe-base-14-fonts
 adwaita-icon-theme
 aiksaurus
