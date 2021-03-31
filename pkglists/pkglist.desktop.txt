@@ -16,6 +16,7 @@ avahi
 b43-fwcutter
 baobab
 bash
+bat
 biber
 bind
 binutils
@@ -27,6 +28,7 @@ bzip2
 calibre-git
 chromium
 chromium-widevine
+cool-retro-term
 coreutils
 cpupower
 crda
