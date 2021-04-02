@@ -2,6 +2,7 @@ aaxtomp3
 acpi
 acpid
 adwaita-icon-theme
+aiksaurus
 alsa-firmware
 alsa-utils
 anki
@@ -10,8 +11,10 @@ autoconf
 automake
 avahi
 b43-fwcutter
+bandwhich
 baobab
 bash
+bat
 biber
 bind
 binutils
@@ -51,6 +54,7 @@ elementary-planner-git
 espanso-bin
 etcher
 evince
+exa
 exfat-utils
 f2fs-tools
 fakeroot
@@ -328,6 +332,7 @@ systemd-sysvcompat
 tar
 telegram-desktop
 telepathy-accounts-signon
+termdown
 terminus-font
 texinfo
 texlive-bibtexextra
