@@ -260,6 +260,7 @@ ntfs-3g
 ntp
 numlockx
 nvm
+obs-studio
 obsidian-appimage
 okular
 onedrive-abraunegg
@@ -351,6 +352,7 @@ tlp
 totem
 tracker
 tracker-miners
+translate-shell
 transmission-gtk
 tree
 ttf-bitstream-vera
