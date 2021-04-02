@@ -47,3 +47,5 @@ alias noteup "notepl && noteps"
 alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dof dotfiles
 
+alias ls exa
+
