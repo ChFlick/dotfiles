@@ -24,3 +24,28 @@ matches:
         type: shell
         params:
           cmd: "echo Hello from your shell"
+
+  # Breadcrumb
+  - trigger: ":bc"
+    replace: "[[{{yesterdaybc}}|<< Yesterday]] | [[{{tomorrowbc}}|Tomorrow >>]]"
+    vars:
+      - name: yesterdaybc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d -1day'"
+      - name: tomorrowbc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +1day'"
+
+  # Meeting
+  - trigger: ":meet"
+    word: true
+    replace: |
+             ## Meeting
+             - Tags:
+             Attendees:
+             Tasks:
+             Notes:
+
+  
