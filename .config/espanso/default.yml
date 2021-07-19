@@ -42,7 +42,7 @@ matches:
   - trigger: ":meet"
     word: true
     replace: |
-             ## Meeting
+             ### Meeting XYZ
              - Tags:
              Attendees:
              Tasks:
