@@ -42,12 +42,12 @@ alias gnomeRestartPls "dbus-send --type=method_call --print-reply  --dest=org.gn
 
 # Notes
 alias notes "git -C $HOME/Documents/notes"
-alias notepl "git -C $HOME/Documents/notes pull"
-alias noteps "git -C $HOME/Documents/notes push"
-alias noteup "notepl && noteps"
+alias notessync "notes pull && notes push"
+alias notescommit "notes add : && notes commit -m \"Update notes\" && notes push" 
 
 alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dof dotfiles
+alias dofcommit "dof add --update && dof commit -m \"Update dotfiles\" && dof push"
 
 alias ls exa
 
