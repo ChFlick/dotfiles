@@ -17,6 +17,7 @@
     sub = submodule update --init --recursive                                                                                                                        
     sw = switch
     unstage = reset HEAD
+    up = push -u origin HEAD
     ush = push                                                               
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
 [commit]

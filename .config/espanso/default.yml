@@ -16,6 +16,14 @@ matches:
         params:
           format: "%d.%m.%Y"
 
+  - trigger: ":isodate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
   # Shell commands
   - trigger: ":shell"
     replace: "{{output}}"
@@ -27,7 +35,7 @@ matches:
 
   # Breadcrumb
   - trigger: ":bc"
-    replace: "[[{{yesterdaybc}}|<< Yesterday]] | [[{{tomorrowbc}}|Tomorrow >>]]"
+    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Work/Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
     vars:
       - name: yesterdaybc
         type: shell

@@ -71,7 +71,6 @@ file
 file-roller
 filesystem
 findutils
-firebase-tools
 firefox
 firejail
 fish
@@ -414,6 +413,7 @@ wallpapers-2018
 webstorm
 wget
 which
+widelands
 wine-gecko
 wine-staging
 wireshark-qt
