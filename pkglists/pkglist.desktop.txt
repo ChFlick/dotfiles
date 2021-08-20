@@ -24,11 +24,13 @@ binutils
 bison
 blueman
 bluez-utils
+brave-bin
 btrfs-progs
 bzip2
 calibre-git
 chromium
 chromium-widevine
+clipit
 cool-retro-term
 coreutils
 cpupower
@@ -69,6 +71,7 @@ file-roller
 filesystem
 findutils
 firefox
+firejail
 fish
 flatpak
 flex
@@ -148,7 +151,7 @@ hexchat
 htop
 httpie
 hugo
-hunspell-en_US
+hunspell-en_us
 illyria-wallpaper
 imagewriter
 img2pdf
@@ -202,13 +205,11 @@ linux510
 linux510-nvidia
 linux510-r8168
 linux511
-linux511-nvidia
 linux511-r8168
 linux54
 linux54-nvidia
 linux54-r8168
 linux59
-linux59-nvidia
 linux59-r8168
 logrotate
 lollypop
@@ -259,13 +260,14 @@ mongodb-tools-bin
 mono
 mousetweaks
 mps-youtube
-mssql-tools
+mpv
 mutter
 nano
 native-image-jdk11-bin
 nautilus
 nautilus-admin
 nautilus-empty-file
+ncdu
 net-tools
 netctl
 netlify
@@ -290,6 +292,7 @@ octave
 okular
 openresolv
 openscenegraph
+openshot
 openssh
 os-prober
 osmctools
@@ -305,6 +308,7 @@ pciutils
 pdfarranger
 peek
 perl
+pinta
 pkgconf
 plank
 plantuml
@@ -312,6 +316,7 @@ polkit-gnome
 postgresql-libs
 powertop
 procps-ng
+procs
 psmisc
 pulseaudio-bluetooth
 pulseaudio-ctl
@@ -329,7 +334,6 @@ qemu-headless
 ranger
 raw-thumbnailer
 rbenv
-redis
 reiserfsprogs
 ripgrep
 rivalcfg
@@ -344,12 +348,12 @@ simple-scan
 slack-desktop
 spectre-meltdown-checker
 speedreader
+speedtest-cli
 spotify
 sqlite-analyzer
 stack
 steam-manjaro
 sudo
-sumo
 sushi
 sysfsutils
 systemd-fsck-silent
