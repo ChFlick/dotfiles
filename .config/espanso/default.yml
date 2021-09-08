@@ -45,6 +45,31 @@ matches:
         type: shell
         params:
           cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +1day'"
+          
+  - trigger: ":nwbc"
+    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Work/Daily Notes/{{tomorrowbc}}|Next Week >>]]"
+    vars:
+      - name: yesterdaybc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d -1day'"
+      - name: tomorrowbc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +3day'"
+          
+  - trigger: ":lwbc"
+    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Last Week]] | [[Work/Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
+    vars:
+      - name: yesterdaybc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d -3day'"
+      - name: tomorrowbc
+        type: shell
+        params:
+          cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +1day'"
+          
 
   # Meeting
   - trigger: ":meet"
@@ -53,6 +78,7 @@ matches:
              ### Meeting XYZ
              - Tags:
              Attendees:
+             Goal:
              Tasks:
              Notes:
 

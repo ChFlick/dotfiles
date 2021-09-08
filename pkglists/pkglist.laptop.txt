@@ -1,3 +1,4 @@
+1password
 aaxtomp3
 acpi
 acpid
@@ -6,6 +7,7 @@ aiksaurus
 akvcam-dkms
 alsa-firmware
 alsa-utils
+android-studio
 anki
 arandr
 autoconf
@@ -150,7 +152,6 @@ helm
 heroku-cli
 highlight
 hnwatch
-howdy
 htop
 httpie
 hugo
@@ -284,6 +285,9 @@ openapi-generator-cli
 openresolv
 openscenegraph
 openssh
+openttd
+openttd-opengfx
+openttd-opensfx
 os-prober
 otf-fira-mono
 otf-latin-modern
@@ -308,7 +312,7 @@ procps-ng
 psmisc
 pycharm-professional
 python-pylast
-qemu-headless
+qemu
 quickhash-gui-bin
 ranger
 raw-thumbnailer
@@ -334,7 +338,6 @@ sqlite-analyzer
 stack
 steam-manjaro
 sudo
-sumo
 sushi
 sway
 sysfsutils
@@ -440,5 +443,4 @@ xournalpp
 yarn
 yay
 yelp
-zoom
 zsh
