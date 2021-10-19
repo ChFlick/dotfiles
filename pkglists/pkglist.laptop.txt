@@ -1,4 +1,3 @@
-1password
 aaxtomp3
 acpi
 acpid
@@ -31,6 +30,7 @@ bzip2
 cabal-install
 chromium
 chromium-widevine
+clion
 clipit
 converseen
 coreutils
@@ -40,6 +40,7 @@ crda
 cronie
 cryptsetup
 darkhttpd
+dart
 dbeaver
 dconf-editor
 device-mapper
@@ -59,7 +60,6 @@ easyeffects
 ebtables
 ecryptfs-utils
 efibootmgr
-elementary-planner-git
 espanso-bin
 etcher
 evince
@@ -83,6 +83,7 @@ gawk
 gcc
 gcc-libs
 gcolor3
+gdb
 gdm
 gedit
 gettext
@@ -102,7 +103,6 @@ gnome-desktop
 gnome-disk-utility
 gnome-epub-thumbnailer
 gnome-font-viewer
-gnome-getting-started-docs
 gnome-keyring
 gnome-notes
 gnome-online-accounts
@@ -196,6 +196,7 @@ libunrar
 libva-mesa-driver
 libva-vdpau-driver
 licenses
+linux-dwarf-pack
 linux-firmware
 linux-latest
 linux510
@@ -281,7 +282,6 @@ obs-studio
 obsidian-appimage
 okular
 onedrive-abraunegg
-openapi-generator-cli
 openresolv
 openscenegraph
 openssh
@@ -304,13 +304,11 @@ perl
 pinta
 plank
 polkit-gnome
-postgresql
 postgresql-libs
 postman-bin
 powertop
 procps-ng
 psmisc
-pycharm-professional
 python-pylast
 qemu
 quickhash-gui-bin
@@ -396,6 +394,7 @@ umbrello
 unace
 undistract-me-git
 unicode-emoji
+unionfs-fuse
 unrar
 usb_modeswitch
 usbutils
@@ -408,6 +407,8 @@ vim-gruvbox-git
 vino
 visual-studio-code-bin
 visualvm
+vivaldi
+vivaldi-ffmpeg-codecs
 vkd3d
 vulkan-intel
 vulkan-mesa-layers
@@ -418,6 +419,7 @@ wget
 which
 widelands
 wine-gecko
+wine-mono
 wine-staging
 wireshark-qt
 wpa_supplicant
@@ -440,7 +442,9 @@ xorg-server
 xorg-twm
 xorg-xinit
 xournalpp
+xterm
 yarn
 yay
 yelp
+zoom
 zsh

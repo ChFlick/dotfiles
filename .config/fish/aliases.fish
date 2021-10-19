@@ -51,3 +51,5 @@ alias dofcommit "dof add --update && dof commit -m \"Update dotfiles\" && dof pu
 
 alias ls exa
 
+# Random stuff
+alias dwarfs /opt/linux-dwarf-pack/AppRun

@@ -33,7 +33,7 @@ matches:
         params:
           cmd: "echo Hello from your shell"
 
-  # Breadcrumb
+  # Breadcrumb 
   - trigger: ":bc"
     replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Work/Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
     vars:
