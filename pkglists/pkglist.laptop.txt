@@ -9,6 +9,7 @@ alsa-utils
 android-studio
 anki
 arandr
+authbind
 autoconf
 automake
 avahi
@@ -26,11 +27,12 @@ bison
 blueman
 bluez-cups
 btrfs-progs
+burpsuite
 bzip2
 cabal-install
+cavif
 chromium
 chromium-widevine
-clion
 clipit
 converseen
 coreutils
@@ -48,9 +50,11 @@ dhclient
 dhcpcd
 diffutils
 discord
+displaylink
 dmidecode
 dmraid
 dnsmasq
+dockd
 docker
 docker-compose
 dosfstools
@@ -62,6 +66,7 @@ ecryptfs-utils
 efibootmgr
 espanso-bin
 etcher
+evdi-git
 evince
 exa
 exfat-utils
@@ -89,7 +94,6 @@ gedit
 gettext
 ghc
 ghc-libs
-gitahead-bin
 gitflow-avh
 glibc
 gnome-backgrounds
@@ -158,6 +162,8 @@ hugo
 hunspell-en_us
 hydra
 i3-gaps
+ibus-typing-booster
+ibus-uniemoji
 illyria-wallpaper
 imagewriter
 inetutils
@@ -172,10 +178,12 @@ iputils
 ipw2100-fw
 ipw2200-fw
 jabref
+jdk-adoptopenjdk
 jdk-openjdk
 jfsutils
 jmeter
 jmstoolbox
+jpegoptim
 jre8-openjdk
 jre8-openjdk-headless
 keepassxc
@@ -184,6 +192,7 @@ kolourpaint
 kruler
 kubectl
 lastpass-cli
+lazydocker
 less
 lib32-libva-vdpau-driver
 lib32-mesa-demos
@@ -203,6 +212,8 @@ linux510
 linux510-headers
 linux513
 linux513-headers
+linux515
+linux515-headers
 lnav
 logrotate
 lollypop
@@ -242,7 +253,6 @@ mhwd
 mhwd-db
 mhwd-tui
 microsoft-office-web-jak
-minikube
 mkinitcpio-openswap
 mlocate
 mobile-broadband-provider-info
@@ -400,6 +410,7 @@ usb_modeswitch
 usbutils
 util-linux
 v4l2loopback-dkms
+vale-bin
 veracrypt
 vi
 vim
@@ -423,6 +434,7 @@ wine-mono
 wine-staging
 wireshark-qt
 wpa_supplicant
+write-good
 xdg-su
 xdg-user-dirs
 xdg-user-dirs-gtk
@@ -438,6 +450,7 @@ xf86-video-intel
 xf86-video-nouveau
 xfce4-terminal
 xfsprogs
+xmousepasteblock-git
 xorg-server
 xorg-twm
 xorg-xinit
@@ -446,5 +459,6 @@ xterm
 yarn
 yay
 yelp
+zaproxy
 zoom
 zsh
