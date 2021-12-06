@@ -75,7 +75,7 @@ matches:
   - trigger: ":meet"
     word: true
     replace: |
-             ### Meeting XYZ
+             ### 
              - Tags:
              Attendees:
              Goal:
