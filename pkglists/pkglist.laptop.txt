@@ -332,6 +332,7 @@ ranger
 raw-thumbnailer
 recordmydesktop
 reiserfsprogs
+rofi
 rsync
 rtm-cli
 rtv
