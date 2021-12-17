@@ -81,6 +81,7 @@ findutils
 firefox
 firejail
 fish
+flameshot
 flatpak
 flex
 fprintd
@@ -127,6 +128,8 @@ gnome-user-docs
 gnome-user-share
 gnome-wallpapers
 gnome-weather
+gnucash
+gnucash-docs
 gobuster
 gparted
 gradle
@@ -188,6 +191,7 @@ jre8-openjdk
 jre8-openjdk-headless
 keepassxc
 kernel-alive
+kitty
 kolourpaint
 kruler
 kubectl
@@ -205,6 +209,7 @@ libunrar
 libva-mesa-driver
 libva-vdpau-driver
 licenses
+liferea
 linux-dwarf-pack
 linux-firmware
 linux-latest
@@ -271,6 +276,7 @@ nautilus-admin
 nautilus-empty-file
 ncdu
 neofetch
+neovim
 net-tools
 netctl
 networkmanager
@@ -353,6 +359,7 @@ systemd-fsck-silent
 systemd-swap
 systemd-sysvcompat
 tar
+tdrop
 teams
 teamspeak3
 telegram-desktop
@@ -397,7 +404,6 @@ ttf-liberation
 ttf-roboto
 ttf-roboto-mono
 tumbler
-typora
 ueberzug
 uget
 umbrello

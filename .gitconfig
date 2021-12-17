@@ -3,7 +3,7 @@
 [merge]
 	tool = meld
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [alias]
     amend = commit --amend

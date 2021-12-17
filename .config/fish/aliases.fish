@@ -1,3 +1,6 @@
+alias vi nvim
+alias vim nvim
+
 # Configs
 alias ea 'vim ~/.config/fish/aliases.fish'
 alias ec 'vim ~/.config/fish/config.fish'
@@ -32,7 +35,6 @@ end
 
 # Util
 alias c clear
-alias vi vim
 alias whoowns "pacman -Qo"
 alias whocontains "pacman -F"
 

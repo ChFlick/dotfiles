@@ -1,9 +1,9 @@
 colorscheme gruvbox 
-set background=dark " gruvbox color scheme dark mode
+set background=dark 
 
 syntax enable		" enable syntax processing
-set tabstop=4		" number of visual spaces per tab
-set softtabstop=4   " number of spaces in tab when editing
+set tabstop=2		" number of visual spaces per tab
+set softtabstop=2   " number of spaces in tab when editing
 set expandtab		" tabs are space
 set number			" show linenumbers
 set showcmd			" show last command in bottom bar
