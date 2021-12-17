@@ -1,4 +1,4 @@
-syntax enable		" enable syntax processing
+syntax enable " Enable syntax processing
 set tabstop=2		" number of visual spaces per tab
 set softtabstop=2   " number of spaces in tab when editing
 set expandtab		" tabs are space
@@ -30,7 +30,13 @@ Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
+" Color theme
 colorscheme nord
+
+set nocompatible
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " Keymappings
 "
