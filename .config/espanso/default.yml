@@ -35,7 +35,7 @@ matches:
 
   # Breadcrumb 
   - trigger: ":bc"
-    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Work/Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
+    replace: "[[Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
     vars:
       - name: yesterdaybc
         type: shell
@@ -47,7 +47,7 @@ matches:
           cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +1day'"
           
   - trigger: ":nwbc"
-    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Work/Daily Notes/{{tomorrowbc}}|Next Week >>]]"
+    replace: "[[Daily Notes/{{yesterdaybc}}|<< Yesterday]] | [[Daily Notes/{{tomorrowbc}}|Next Week >>]]"
     vars:
       - name: yesterdaybc
         type: shell
@@ -59,7 +59,7 @@ matches:
           cmd: "bash -c 'LC_ALL=en_GB date +%Y-%m-%d_%a -d +3day'"
           
   - trigger: ":lwbc"
-    replace: "[[Work/Daily Notes/{{yesterdaybc}}|<< Last Week]] | [[Work/Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
+    replace: "[[Daily Notes/{{yesterdaybc}}|<< Last Week]] | [[Daily Notes/{{tomorrowbc}}|Tomorrow >>]]"
     vars:
       - name: yesterdaybc
         type: shell

@@ -9,6 +9,7 @@ alsa-utils
 android-studio
 anki
 arandr
+audacious
 authbind
 autoconf
 automake
@@ -84,6 +85,7 @@ fish
 flameshot
 flatpak
 flex
+flmusic
 fprintd
 gawk
 gcc
@@ -117,6 +119,7 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-extension-desk-changer-git
 gnome-shell-extension-gsconnect
+gnome-shell-extension-nightthemeswitcher
 gnome-shell-extensions
 gnome-system-log
 gnome-system-monitor
@@ -131,6 +134,7 @@ gnome-weather
 gnucash
 gnucash-docs
 gobuster
+goland
 gparted
 gradle
 grep
@@ -221,6 +225,7 @@ linux515
 linux515-headers
 lnav
 logrotate
+logseq-desktop-bin
 lollypop
 lrzip
 lsb-release
@@ -288,6 +293,7 @@ nfs-utils
 ngrok
 nmap
 nodejs-emojione
+noisetorch
 noto-fonts-emoji
 nss-mdns
 ntfs-3g

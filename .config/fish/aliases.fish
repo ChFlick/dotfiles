@@ -22,7 +22,7 @@ alias .... "cd ../../.."
 alias tm "gnome-system-monitor"
 alias cursebreaker '/bin/bash -c "/mnt/48680A47680A33EA/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/CurseBreaker-linux"'
 alias owf aiksaurus
-
+alias cat bat
 # git
 alias gitp "git"
 function gitlist --description 'Toplist of edited files in git'
@@ -41,6 +41,8 @@ alias whocontains "pacman -F"
 thefuck --alias | source
 
 alias gnomeRestartPls "dbus-send --type=method_call --print-reply  --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'global.reexec_self()'"
+
+alias dropdownKitty "tdrop -ma -w 80% -x 10% kitty"
 
 # Notes
 alias notes "git -C $HOME/Documents/notes"
