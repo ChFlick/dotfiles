@@ -6,6 +6,7 @@ adwaita-icon-theme
 aiksaurus
 alsa-firmware
 alsa-utils
+android-studio
 anki
 asciinema
 aseprite
@@ -24,7 +25,6 @@ binutils
 bison
 blueman
 bluez-utils
-brave-bin
 btrfs-progs
 bzip2
 calibre-git
@@ -75,8 +75,9 @@ firejail
 fish
 flatpak
 flex
+flutter
 fprintd
-freetype2-infinality
+freetype2
 gawk
 gcc
 gcc-libs
@@ -96,7 +97,7 @@ gnome-calendar
 gnome-characters
 gnome-clocks
 gnome-contacts
-gnome-control-center
+gnome-control-center-x11-scaling
 gnome-desktop
 gnome-disk-utility
 gnome-font-viewer
@@ -122,6 +123,7 @@ gnome-user-share
 gnome-wallpapers
 gnome-weather
 godot-bin
+golang-github-golang-freetype
 gparted
 gradle
 grep
@@ -204,13 +206,12 @@ linux-latest
 linux510
 linux510-nvidia
 linux510-r8168
-linux511
-linux511-r8168
+linux515
+linux515-nvidia
+linux515-r8168
 linux54
 linux54-nvidia
 linux54-r8168
-linux59
-linux59-r8168
 logrotate
 lollypop
 lostfiles
@@ -261,7 +262,7 @@ mono
 mousetweaks
 mps-youtube
 mpv
-mutter
+mutter-x11-scaling
 nano
 native-image-jdk11-bin
 nautilus
@@ -270,7 +271,6 @@ nautilus-empty-file
 ncdu
 net-tools
 netctl
-netlify
 networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
@@ -279,7 +279,6 @@ networkmanager-vpnc
 nfs-utils
 ngrok
 nodejs-nearley
-nodejs-nestjs-cli
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
@@ -290,6 +289,7 @@ nvm
 obsidian-appimage
 octave
 okular
+onedrive-abraunegg
 openresolv
 openscenegraph
 openshot
@@ -333,7 +333,6 @@ python-sympy
 qemu-headless
 ranger
 raw-thumbnailer
-rbenv
 reiserfsprogs
 ripgrep
 rivalcfg
@@ -380,6 +379,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 texlive-tikz-uml
+thefuck
 thunar-archive-plugin-gtk3
 thunar-gtk3
 thunar-media-tags-plugin
@@ -452,6 +452,7 @@ xf86-video-intel
 xf86-video-nouveau
 xfce4-terminal
 xfsprogs
+xlayoutdisplay
 xorg-server
 xorg-twm
 xorg-xinit

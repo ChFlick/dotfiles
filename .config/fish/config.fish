@@ -10,6 +10,7 @@ function nvm
 end
 
 set -x NVM_DIR ~/.nvm
+set -x CHROME_EXECUTABLE /usr/bin/chromium
 nvm use default --silent
 
 set -gx VISUAL vim
