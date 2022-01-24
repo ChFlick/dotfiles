@@ -44,6 +44,7 @@ cronie
 cryptsetup
 darkhttpd
 dart
+datagrip
 dbeaver
 dconf-editor
 device-mapper
@@ -184,7 +185,6 @@ iptables
 iputils
 ipw2100-fw
 ipw2200-fw
-jabref
 jdk-adoptopenjdk
 jdk-openjdk
 jfsutils
@@ -225,7 +225,6 @@ linux515
 linux515-headers
 lnav
 logrotate
-logseq-desktop-bin
 lollypop
 lrzip
 lsb-release
@@ -356,6 +355,7 @@ spectre-meltdown-checker
 speedtest-cli
 spotify
 sqlite-analyzer
+sshtunnel
 stack
 steam-manjaro
 sudo
@@ -387,7 +387,6 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 the_silver_searcher
-thefuck
 thunar-archive-plugin-gtk3
 thunar-gtk3
 thunar-volman-gtk3
