@@ -12,8 +12,8 @@ set -x NVM_DIR ~/.nvm
 set -x CHROME_EXECUTABLE /usr/bin/chromium
 nvm use default --silent
 
-set -gx VISUAL vim
-
+set -gx VISUAL nvim
+set -gx EDITOR nvim
 
 # fzf
 ####
