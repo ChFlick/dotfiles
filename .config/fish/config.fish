@@ -1,6 +1,9 @@
 . ~/.config/fish/aliases.fish
 . ~/.config/fish/config.local.fish
 
+set fish_greeting ''
+set -gx QT_STYLE_OVERRIDE 'kvantum'
+
 set -gx MAKEFLAGS '-j8'
 set -gx NVM_DIR /usr/share/nvm
 

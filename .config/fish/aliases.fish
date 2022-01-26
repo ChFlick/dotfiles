@@ -19,11 +19,22 @@ alias ... "cd ../.."
 alias .... "cd ../../.."
 
 # Tools
+alias suf "su -l -s /bin/fish"
 alias tm "gnome-system-monitor"
 alias cursebreaker '/bin/bash -c "/mnt/48680A47680A33EA/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/CurseBreaker-linux"'
 alias owf aiksaurus
 alias cat bat
+
+function findDesktopFiles --description 'Find the .desktop files for your Program'
+    if count $argv
+        grep -r "Name.*=$argv[1]" --include="*.desktop" --exclude-dir=boot,dev,proc,run,snap,sys / 2> /dev/null
+    else
+        echo 'Please provide a program name'
+    end
+end
+
 # git
+alias gits "git status"
 alias gitp "git"
 function gitlist --description 'Toplist of edited files in git'
     if count $argv    
