@@ -62,7 +62,7 @@ alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dof dotfiles
 alias dofcommit "dof add --update && dof commit -m \"Update dotfiles\" && dof push"
 
-alias ls exa
+alias ls "exa --icons"
 
 # Random stuff
 alias dwarfs /opt/linux-dwarf-pack/AppRun
