@@ -1,0 +1,30 @@
+{
+  :devices {
+    :internal
+      [{:vendor_id 1452 :product_id 835}]
+  }
+
+  :layers {
+    :caps {:key :caps_lock}
+  }
+
+
+  :main [
+    {:des "Swap FN and L_CTRL" :rules [:internal [:##left_control :##fn] [:##fn :##left_control]]}
+    {:des "Caps Arrowkeys" :rules
+      [:internal :caps
+        [:##j :##left_arrow]
+        [:##k :##down_arrow]
+        [:##l :##right_arrow]
+        [:##i :##up_arrow]
+        [:##u :##page_up]
+        [:##o :##page_down]
+        [:##delete_or_backspace :delete_forward]
+        [:spacebar :!Tspacebar]
+        [:##h :##home]
+        [:##semicolon :##end]
+      ]
+    }
+  ]
+}
+

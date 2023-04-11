@@ -1,0 +1,74 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.8.0",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 1,
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Razer Basilisk V3",
+          "productID" : "0x99",
+          "category" : "mouse",
+          "vendorID" : "0x1532"
+        }
+      },
+      "scrolling" : {
+        "distance" : 3,
+        "modifiers" : {
+          "command" : {
+            "type" : "none"
+          },
+          "shift" : {
+            "type" : "none"
+          }
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "SteelSeries Rival 100 Gaming Mouse",
+          "productID" : "0x1702",
+          "category" : "mouse",
+          "vendorID" : "0x1038"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "horizontal" : 4,
+          "vertical" : 3
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "productID" : "0x343",
+          "category" : "trackpad",
+          "vendorID" : "0x5ac"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    }
+  ]
+}
