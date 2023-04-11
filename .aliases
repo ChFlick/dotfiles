@@ -58,6 +58,10 @@ gitlist() {
     fi
 }
 
+# Dotfiles
+alias dof='yadm'
+alias dofs='yadm status'
+
 # Util
 alias c='clear'
 alias whoowns='pacman -Qo'

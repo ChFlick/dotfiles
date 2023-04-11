@@ -4,30 +4,14 @@ My configuration files for Linux and macOS.
 
 ## macOS
 
-Install git with XCode Command Line Tools:
+Install XCode Command Line Tools, Brew, yadm, and then pull the dotfiles
 
 ```sh
 xcode-select --install
-```
-
-# Clone the repository
-
-```sh
-git clone git@github.com:chflick/dotfiles.git
-cd dotfiles
-```
-
-# Install Ansible
-
-```sh
-./install
-```
-
-# Run playbook
-
-```sh
-ansible-playbook bootstrap.yml
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install yadm
+yadm clone https://github.com/chflick/dotfiles.git
 ```
 
 ### Credits
-Credits to https://github.dev/phelipetls/dotfiles where I peeked a bit for this dotfiles setup.
+Credits to https://github.dev/phelipetls/dotfiles where I peeked a bit for the ansible setup.
