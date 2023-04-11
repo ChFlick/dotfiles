@@ -1,0 +1,12 @@
+[submodule "git-toolbelt"]
+	path = git-toolbelt
+	url = https://github.com/nvie/git-toolbelt.git
+	ignore = dirty
+[submodule "powerlevel10k"]
+	path = powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+	ignore = dirty
+[submodule ".config/ranger/plugins/ranger_devicons"]
+	path = .config/ranger/plugins/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons.git
+	ignore = dirty

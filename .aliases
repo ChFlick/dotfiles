@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# Aliases
+alias vi='nvim'
+alias vim='nvim'
+
+# Configs
+alias ea='vim ~/.aliases'
+alias ec='vim ~/.zshrc'
+alias ep='vim ~/.profile'
+alias eg='vim ~/.gitconfig'
+alias ev='vim ~/.vimrc'
+
+# Docker
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+alias dcs='docker-compose stop'
+
+# Navigation
+alias cd..='cd ..'
+alias cdbuf='cd $TOAST_GIT/buffet'
+
+alias   ..='cd ..'
+alias  ...='cd ../../' 
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
+# Tools
+alias suf='su -l -s /bin/fish'
+alias owf='aiksaurus'
+alias cat='bat'
+tm() { # "task manager"
+  if [[ "$(uname)" == "Darwin" ]]; then
+    open -a "Activity Monitor"
+  elif [[ "$(uname)" == "Linux" ]]; then
+    # Linux with GNOME desktop
+    if command -v gnome-system-monitor >/dev/null; then
+      gnome-system-monitor
+    else
+      echo "GNOME System Monitor is not installed on this system."
+    fi
+  else
+    echo "This function is only supported on macOS and Linux."
+  fi
+}
+
+
+# Git
+alias gits='git status'
+alias gitp='git'
+# recently changed files ordered by number of changes
+gitlist() {
+    if [[ $# -gt 0 ]]; then
+        git log --since="($1) days ago" --pretty=format:"" --name-only | grep "[^\s]" | sort | uniq -c | sort -nr | head -10
+    else
+        git log --since="90 days ago" --pretty=format:"" --name-only | grep "[^\s]" | sort | uniq -c | sort -nr | head -10
+    fi
+}
+
+# Util
+alias c='clear'
+alias whoowns='pacman -Qo'
+alias whocontains='pacman -F'
+
+alias dropdownKitty='tdrop -ma -w 80% -x 10% kitty'
+
+# Notes
+alias notes='git -C "~/Resilio Sync/notes"'
+alias notessync='notes pull && notes push'
+alias notescommit='notes add : && notes commit -m "Update notes" && notes push'
+
+alias ls='exa --icons'
+alias la='exa -a'
+alias ll='exa -al'

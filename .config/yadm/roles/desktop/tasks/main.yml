@@ -1,0 +1,27 @@
+- name: Install desktop tools in macOS
+  loop:
+    - iterm2 # terminal
+    - swish # window manager
+    - linearmouse # mouse optimization
+    - bluesnooze # turn off bluetooth when sleeping
+    - karabiner-elements # keyboard remapping
+    - yqrashawn/goku/goku # keyboard remapping / karabiner settings as code
+    - hiddenbar # hide menu bar
+    - obsidian # note taking
+    - flameshot # screenshot
+    - kap # gif recorder
+    - ueli # launcher
+    - vivaldi # browser
+    - firefox # browser
+    - google-chrome # browser
+    - bitwarden # password manager
+    - resilio-sync # sync
+    - maccy # clipboard manager
+    - visual-studio-code # editor
+    - keybase # crypto
+
+
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  when: ansible_distribution == "MacOSX"

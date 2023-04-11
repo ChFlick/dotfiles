@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd $HOME
+
+brew install ansible
+ansible-galaxy install -r requirements.yml
+
+# Start brew services
+brew services start yqrashawn/goku/goku

@@ -1,0 +1,42 @@
+- name: Add Homebrew taps
+  community.general.homebrew_tap:
+    name: homebrew/cask-fonts
+    state: present
+  when: ansible_distribution == "MacOSX"
+
+- name: Install CLI tools in macOS
+  loop:
+    - coreutils # gnu utils
+    - moreutils # gnu utils
+    - ripgrep # grep
+    - fd # find
+    - jq # json
+    - btop # top
+    - fzf # fuzzy finder
+    - bat # cat + pager
+    - exa # ls
+    - tldr
+    - git-delta # diff + pager
+    - difftastic # diff + pager
+    - git-absorb # git extra commands
+    - ranger # file manager
+    - watch # run command in interval
+    - entr # watch + run command when files change
+    - lnav # log viewer
+    - docker # container
+    - docker-compose # container
+    - colima # container
+    - autocannon # benchmark
+    - shellcheck # shell linter
+    - zsh-autosuggestions # zsh plugin
+    - zsh-syntax-highlighting # zsh plugin
+    - zsh-history-substring-search # zsh plugin
+    - font-iosevka # font
+    - font-iosevka-nerd-font # font
+    - font-hack # font
+    - font-hack-nerd-font # font
+    - sheldon # cli plugins manager
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  when: ansible_distribution == "MacOSX"

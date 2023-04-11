@@ -1,0 +1,58 @@
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[core]
+	editor = nvim
+	autocrlf = input
+  pager = delta
+[pager]
+  difftool = true
+[diff]
+  external = difft
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[mergetool "vscode"]
+  cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+[merge "npm-merge-driver"]
+    name = automatically merge npm lockfiles
+    driver = npx npm-merge-driver merge %A %O %B %P
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  features = line-numbers decorations
+  navigate = true
+  line-numbers = true
+[alias]
+  aa = add .
+  amend = commit --amend
+  b = branch
+  c = commit
+  co-pr = !sh -c 'git fetch $1 pull/$2/head:pr/$2 && git switch pr/$2' -
+  f = fetch
+  r = restore
+  s = status -s
+  st = status
+  sub = submodule update --init --recursive                                                                                                                        
+  sw = switch
+  undo = reset --soft HEAD^
+  unstage = reset HEAD
+  up = push -u origin HEAD
+  ush = push                                                               
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+  ull = pull
+[pull]
+	rebase = true
+[help]
+  autocorrect = 10
+[include]
+  path = .gitconfig.local
+[includeIf "gitdir:~/Resilio Sync/"]
+  path = .gitconfig.local.private
+[includeIf "gitdir:~/dev/"]
+  path = .gitconfig.local.private
+[init]
+	defaultBranch = main
