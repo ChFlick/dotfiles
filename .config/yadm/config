@@ -1,0 +1,5 @@
+[user]
+	name = ChFlick
+	email = ChFlick@users.noreply.github.com
+[core]
+	sshCommand = ssh -i ~/.ssh/id_github_chflick
