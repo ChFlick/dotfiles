@@ -28,14 +28,11 @@
     - colima # container
     - autocannon # benchmark
     - shellcheck # shell linter
-    - zsh-autosuggestions # zsh plugin
-    - zsh-syntax-highlighting # zsh plugin
-    - zsh-history-substring-search # zsh plugin
     - font-iosevka # font
     - font-iosevka-nerd-font # font
     - font-hack # font
     - font-hack-nerd-font # font
-    - sheldon # cli plugins manager
+    - fish # shell
   community.general.homebrew:
     name: "{{ item }}"
     state: present

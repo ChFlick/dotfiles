@@ -15,7 +15,6 @@
     - firefox # browser
     - google-chrome # browser
     - bitwarden # password manager
-    - resilio-sync # sync
     - maccy # clipboard manager
     - visual-studio-code # editor
     - keybase # crypto
