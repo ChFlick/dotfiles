@@ -63,8 +63,8 @@ alias notes "git -C '$HOME/Resilio Sync/notes'"
 alias notessync "notes pull && notes push"
 alias notescommit "notes add : && notes commit -m \"Update notes\" && notes push" 
 
-alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dof dotfiles
+alias dof yadm
+alias dofs "yadm status"
 alias dofcommit "dof add --update && dof commit -m \"Update dotfiles\" && dof push"
 
 alias ls "exa --icons"
