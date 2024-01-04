@@ -50,8 +50,6 @@
   autocorrect = 10
 [include]
   path = .gitconfig.local
-[includeIf "gitdir:~/Resilio Sync/"]
-  path = .gitconfig.local.private
 [includeIf "gitdir:~/dev/"]
   path = .gitconfig.local.private
 [init]
