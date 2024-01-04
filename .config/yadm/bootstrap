@@ -2,8 +2,23 @@
 
 cd $HOME
 
-brew install ansible
-ansible-galaxy install -r requirements.yml
+system_type=$(uname -s)
 
-# Start brew services
-brew services start yqrashawn/goku/goku
+if [ "$system_type" = "Darwin" ]; then
+  echo "Executing mac installation..."
+  echo "Initializing submodules"
+  yadm submodule update --force --init --recursive --jobs 4
+
+
+  # Start brew services
+  echo "Starting goku"
+  brew services start yqrashawn/goku/goku
+
+  # npm config
+  echo "prefix=~/.npm-packages" >> ~/.npmrc
+
+  # nvim config
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  nvim --headless -c 'TSInstallSync! typescript javascript tsx html yaml toml json jsonc python jsdoc lua bash vim scss astro markdown markdown_inline' -c quit
+fi
