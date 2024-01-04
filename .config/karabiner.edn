@@ -5,13 +5,19 @@
   }
 
   :layers {
-    :caps {:key :caps_lock}
+    :caps {:key :caps_lock :alone {:key :escape} }
+    :hyper {:key :non_us_backslash :alone {:key :grave_accent_and_tilde}}
   }
 
 
   :main [
-    {:des "Swap FN and L_CTRL" :rules [:internal [:##left_control :##fn] [:##fn :##left_control]]}
-    {:des "Caps Arrowkeys" :rules
+    {
+     :des "Swap FN and L_CTRL"
+     :rules [:internal [:##left_control :##fn] [:##fn :##left_control]]
+    }
+    {
+     :des "Caps Arrowkeys"
+     :rules
       [:internal :caps
         [:##j :##left_arrow]
         [:##k :##down_arrow]
@@ -23,6 +29,14 @@
         [:spacebar :!Tspacebar]
         [:##h :##home]
         [:##semicolon :##end]
+        [:##grave_accent_and_tilde :caps_lock]
+      ]
+    }
+    {
+     :des "§± Layer"
+     :rules
+      [:internal :hyper
+       [:##grave_accent_and_tilde :caps_lock]
       ]
     }
   ]

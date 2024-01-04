@@ -1,10 +1,10 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.8.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.3",
   "schemes" : [
     {
       "pointer" : {
-        "acceleration" : 1,
-        "speed" : 0.0689655172413792768,
+        "acceleration" : 0,
+        "speed" : 0.1985,
         "disableAcceleration" : false
       },
       "if" : {
@@ -19,15 +19,20 @@
         "distance" : 3,
         "modifiers" : {
           "command" : {
-            "type" : "none"
+            "type" : "auto"
           },
           "shift" : {
-            "type" : "none"
+            "type" : "auto"
           }
         }
       }
     },
     {
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.2962,
+        "disableAcceleration" : false
+      },
       "if" : {
         "device" : {
           "productName" : "SteelSeries Rival 100 Gaming Mouse",
@@ -64,6 +69,31 @@
         },
         "distance" : {
           "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.254
+      },
+      "if" : {
+        "device" : {
+          "productName" : "USB-PS\/2 Optical Mouse",
+          "productID" : "0xc051",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 3
         },
         "speed" : {
           "vertical" : 0

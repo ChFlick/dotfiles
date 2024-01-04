@@ -59,7 +59,7 @@ gitlist() {
 }
 
 # Dotfiles
-alias dof='yadm'
+alias dof='GIT_SSH_COMMAND="ssh -i ~/.ssh/id_github_chflick" yadm'
 alias dofs='yadm status'
 
 # Util
