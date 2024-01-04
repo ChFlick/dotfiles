@@ -9,6 +9,8 @@ if [ "$system_type" = "Darwin" ]; then
   echo "Initializing submodules"
   yadm submodule update --force --init --recursive --jobs 4
 
+  echo "Installing brew bundle"
+  brew bundle --global
 
   # Start brew services
   echo "Starting goku"
