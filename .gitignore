@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 
 .config/Code/
 !.config/Code/User/settings.json

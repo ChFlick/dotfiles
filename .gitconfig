@@ -6,6 +6,7 @@
 	editor = nvim
 	autocrlf = input
   pager = delta
+  excludesfile = ~/.gitignore
 [pager]
   difftool = true
 [diff]
@@ -42,10 +43,13 @@
   unstage = reset HEAD
   up = push -u origin HEAD
   ush = push                                                               
+  pushf = push --force-with-lease
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
   ull = pull
 [pull]
 	rebase = true
+[rebase]
+  updateRefs = true
 [help]
   autocorrect = 10
 [include]
