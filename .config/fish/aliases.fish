@@ -73,3 +73,13 @@ alias la "exa -a"
 ## Java Versions
 alias j8 "export JAVA_HOME=(/usr/libexec/java_home -v 1.8)"
 alias j11 "export JAVA_HOME=(/usr/libexec/java_home -v 11)"
+
+function repo
+  if count $argv > /dev/null
+    cd $TOAST_GIT/$argv
+  else
+    cd $TOAST_GIT
+  end
+end
+
+complete --command repo --arguments '(__fish_complete_directories ($TOAST_GIT))'
