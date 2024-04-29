@@ -11,6 +11,8 @@ set -gx VISUAL nvim
 set -gx EDITOR nvim
 set -gx VOLTA_HOME $HOME/.volta
 
+set PATH /Users/christoph.flick/.npm-packages/bin/ $PATH
+
 set -x TOAST_GIT $HOME/toast/git-repos
 set -x RIPGREP_CONFIG_PATH $HOME/.ripgreprc
 

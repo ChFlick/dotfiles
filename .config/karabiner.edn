@@ -19,10 +19,10 @@
      :des "Caps Arrowkeys"
      :rules
       [:internal :caps
-        [:##j :##left_arrow]
-        [:##k :##down_arrow]
+        [:##h :##left_arrow]
+        [:##j :##down_arrow]
+        [:##k :##up_arrow]
         [:##l :##right_arrow]
-        [:##i :##up_arrow]
         [:##u :##page_up]
         [:##o :##page_down]
         [:##delete_or_backspace :delete_forward]

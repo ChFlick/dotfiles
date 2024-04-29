@@ -32,6 +32,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " Nerdtree
 Plug 'preservim/nerdtree'
 
+Plug 'ThePrimeagen/vim-be-good'
+
 " Status line
 Plug 'vim-airline/vim-airline'
 
