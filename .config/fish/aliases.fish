@@ -1,5 +1,6 @@
 alias vi nvim
 alias vim nvim
+alias lvim "NVIM_APPNAME=lazyvim nvim"
 
 # Configs
 alias ea 'vim ~/.config/fish/aliases.fish'

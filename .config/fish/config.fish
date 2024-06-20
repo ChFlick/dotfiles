@@ -32,3 +32,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 if status is-login
   ssh-add -q --apple-load-keychain
 end
+
+# Created by `pipx` on 2024-05-31 11:55:51
+set PATH $PATH /Users/christoph.flick/.local/bin
