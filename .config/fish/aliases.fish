@@ -68,8 +68,8 @@ alias dof yadm
 alias dofs "yadm status"
 alias dofcommit "dof add --update && dof commit -m \"Update dotfiles\" && dof push"
 
-alias ls "exa --icons"
-alias la "exa -a"
+alias ls "eza --icons"
+alias la "eza -a"
 
 ## Java Versions
 alias j8 "export JAVA_HOME=(/usr/libexec/java_home -v 1.8)"

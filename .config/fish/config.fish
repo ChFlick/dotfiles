@@ -35,3 +35,4 @@ end
 
 # Created by `pipx` on 2024-05-31 11:55:51
 set PATH $PATH /Users/christoph.flick/.local/bin
+zoxide init fish | source
