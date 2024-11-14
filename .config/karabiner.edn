@@ -2,6 +2,8 @@
   :devices {
     :internal
       [{:vendor_id 1452 :product_id 835}]
+    :magic
+      [{:vendor_id 76 :product_id 668}]
   }
 
   :layers {
@@ -13,7 +15,7 @@
   :main [
     {
      :des "Swap FN and L_CTRL"
-     :rules [:internal [:##left_control :##fn] [:##fn :##left_control]]
+     :rules [:internal :magic [:##left_control :##fn] [:##fn :##left_control]]
     }
     {
      :des "Caps Arrowkeys"
