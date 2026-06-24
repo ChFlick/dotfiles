@@ -62,3 +62,16 @@ to sync to other machines.
 
 `bootstrap.ps1` is safe to re-run. Use `-NoInstall` to only re-link config, or
 `-Copy` to copy instead of symlink.
+
+## Companion repo: llm-assets
+
+Copilot CLI assets (agents/hooks/skills/knowledge base) live in the separate
+private repo [llm-assets](https://github.com/ChFlick/llm-assets), which has its
+own `setup.ps1`. To set it up alongside the dotfiles:
+
+```powershell
+pwsh -File windows\bootstrap.ps1 -WithLlmAssets
+```
+
+This clones it to `~/dev/llm-assets` (if missing) and runs its setup. Requires
+access to the private repo and an elevated/Developer-Mode prompt for junctions.

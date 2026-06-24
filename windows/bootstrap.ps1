@@ -22,13 +22,18 @@
     Copy files instead of symlinking (use when Developer Mode / admin is
     unavailable). Symlinks are preferred so edits flow back to the repo.
 
+.PARAMETER WithLlmAssets
+    Also clone (if missing) and set up the companion `llm-assets` repo —
+    GitHub Copilot CLI agents/hooks/skills/knowledge base.
+
 .EXAMPLE
     pwsh -File windows\bootstrap.ps1
 #>
 [CmdletBinding()]
 param(
     [switch]$NoInstall,
-    [switch]$Copy
+    [switch]$Copy,
+    [switch]$WithLlmAssets
 )
 
 $ErrorActionPreference = 'Stop'
@@ -146,6 +151,23 @@ function Seed-FromTemplate {
     Write-Ok "Seeded $Target (edit it with your details)"
 }
 
+function Setup-LlmAssets {
+    $dest = Join-Path $HOME 'dev\llm-assets'
+    if (-not (Test-Path $dest)) {
+        Write-Step "Cloning llm-assets"
+        git clone https://github.com/ChFlick/llm-assets.git $dest
+    } else {
+        Write-Skip "llm-assets already cloned: $dest"
+    }
+    $setup = Join-Path $dest 'setup.ps1'
+    if (Test-Path $setup) {
+        Write-Step "Running llm-assets setup.ps1"
+        & $setup
+    } else {
+        Write-Warning "llm-assets setup.ps1 not found at $setup"
+    }
+}
+
 # ---------------------------------------------------------------------------
 # 3. Run
 # ---------------------------------------------------------------------------
@@ -177,4 +199,9 @@ Seed-FromTemplate (Join-Path $WindowsDir 'gitconfig.local.template')            
 Seed-FromTemplate (Join-Path $WindowsDir 'gitconfig.local.private.template')    (Join-Path $HOME '.gitconfig.local.private')
 
 Write-Host ""
+if ($WithLlmAssets) {
+    Write-Step "Setting up companion llm-assets repo"
+    try { Setup-LlmAssets } catch { Write-Warning "llm-assets setup failed: $($_.Exception.Message)" }
+}
+
 Write-Ok "Done. Restart your shell (or run: . `$PROFILE) to load the new profile."

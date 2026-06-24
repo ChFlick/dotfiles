@@ -70,6 +70,18 @@ seeded from `*.template` and listed in `.gitignore`:
 - `~/.config/powershell/profile.local.ps1` — machine/work-specific PowerShell
 - `~/.zshrc.local` — machine/work-specific zsh
 
+## Related repositories
+
+- **[llm-assets](https://github.com/ChFlick/llm-assets)** (private) — GitHub
+  Copilot CLI assets: custom agents, hooks, skills, knowledge base, and
+  instructions. It has its own `setup.ps1` that junction-links those folders into
+  `~/.copilot`. Kept separate (different access/lifecycle); the Windows bootstrap
+  can optionally pull it in:
+
+  ```powershell
+  pwsh -File windows\bootstrap.ps1 -WithLlmAssets
+  ```
+
 ## Editing shortcuts
 
 `ea` aliases, `ec` shell config, `ep` profile, `eg` gitconfig, `ev` editor config.
