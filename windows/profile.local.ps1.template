@@ -1,0 +1,39 @@
+# ============================================================================
+#  Local-only PowerShell overrides  (machine / work specific — NOT committed)
+#  Copy to:  ~/.config/powershell/profile.local.ps1   and edit.
+#  Sourced first by the shared profile (windows/Microsoft.PowerShell_profile.ps1).
+# ============================================================================
+
+# --- Example: load a work repo's alias script when inside it -----------------
+# $root = [Environment]::GetEnvironmentVariable("REPOROOT")
+# if ($root -and ("$($PWD.Path)\" -like "$($root)\*") -and (Test-Path (Join-Path $root "aliases.ps1"))) {
+#     . (Join-Path $root "aliases.ps1")
+# }
+
+# --- Example: native arg-completer for an internal CLI ('dev') ---------------
+# Register-ArgumentCompleter -Native -CommandName "dev" -ScriptBlock {
+#     param($wordToComplete, $commandAst, $cursorPosition)
+#     $arguments = $commandAst.Extent.ToString().Replace('"', '\"')
+#     $commandLine = if ($arguments.Length -gt 4) { $arguments.Substring(4) } else { "" }
+#     $position = $cursorPosition - 4
+#     "dev [suggest:$position] `"$commandLine`"" | Invoke-Expression | ForEach-Object {
+#         [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+#     }
+# }
+
+# --- Example: jump to a repo under a work git root ---------------------------
+# function repo {
+#     param ( [string]$repoName )
+#     if ($repoName) { Set-Location "$env:MSFT_GIT\$repoName" } else { Set-Location $env:MSFT_GIT }
+# }
+
+# --- Example: project-specific tool launchers --------------------------------
+# function vmi-setup { bun --cwd "$env:USERPROFILE\path\to\vmi-setup" .\cli.ts @args }
+
+# --- Example: internal Copilot wrapper in a throwaway temp dir ----------------
+# function Invoke-AgencyCopilotTmp {
+#     $tmp = New-Item -ItemType Directory -Path (Join-Path $env:TEMP "copilot-$(Get-Random)")
+#     $prev = $PWD; Set-Location $tmp
+#     try { agency copilot @args } finally { Set-Location $prev; Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue }
+# }
+# Set-Alias agtemp Invoke-AgencyCopilotTmp

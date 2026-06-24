@@ -1,0 +1,57 @@
+# ============================================================================
+#  Windows git config (shared, version-controlled via dotfiles)
+#  Linked into ~/.gitconfig by windows/bootstrap.ps1
+#  Machine/work-specific identity & credentials live in the included
+#  .gitconfig.local / .gitconfig.local.private (NOT committed).
+# ============================================================================
+[core]
+  editor = nvim
+  autocrlf = input
+  excludesfile = ~/.gitignore
+  ignorecase = false
+[pager]
+  difftool = true
+[difftool]
+  prompt = false
+[mergetool "vscode"]
+  cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+[delta]
+  features = line-numbers decorations
+  navigate = true
+  line-numbers = true
+[alias]
+  aa = add .
+  amend = commit --amend
+  amendit = commit --amend --no-edit
+  b = branch
+  c = commit
+  cm = commit -m
+  co-pr = !sh -c 'git fetch $1 pull/$2/head:pr/$2 && git switch pr/$2' -
+  f = fetch
+  fp = fetch --prune
+  r = restore
+  s = status -s
+  st = status
+  sub = submodule update --init --recursive
+  sw = switch
+  undo = reset --soft HEAD^
+  unstage = reset HEAD
+  up = push -u origin HEAD
+  ush = push
+  pushf = push --force-with-lease
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+  ull = pull
+[pull]
+  rebase = true
+[rebase]
+  updateRefs = true
+[help]
+  autocorrect = 10
+[init]
+  defaultBranch = main
+# User identity (name/email) — keep out of the committed file:
+[include]
+  path = .gitconfig.local
+# Per-area overrides (e.g. work repos under ~/dev/) — secrets/creds:
+[includeIf "gitdir:~/dev/"]
+  path = .gitconfig.local.private

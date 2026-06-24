@@ -1,0 +1,12 @@
+# Copy to ~/.gitconfig.local.private and fill in per-area / credential settings.
+# This file is NOT committed (contains org names, usernames, auth authorities).
+# Applied only inside the gitdir(s) configured in the main gitconfig (e.g. ~/dev/).
+
+# Example: Azure DevOps credential bindings
+# [credential "azrepos:org/your-org"]
+#   username = you@example.com
+#   azureAuthority = https://login.microsoftonline.com/<tenant-id>
+
+# Example: trust a specific working tree
+# [safe]
+#   directory = C:/path/to/repo
