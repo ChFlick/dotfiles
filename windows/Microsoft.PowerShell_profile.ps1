@@ -89,8 +89,8 @@ Set-Alias touch New-Item
 
 function lv {
     $env:NVIM_APPNAME = "lvim"
-    nvim @args
-    Remove-Item Env:\NVIM_APPNAME
+    try { nvim @args }
+    finally { Remove-Item Env:\NVIM_APPNAME -ErrorAction SilentlyContinue }
 }
 
 if (Get-Command eza -ErrorAction SilentlyContinue) {

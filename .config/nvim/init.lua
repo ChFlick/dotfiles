@@ -73,11 +73,12 @@ end
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
--- Unbind space in visual mode to make leader work
-map("", "<Space>", "<Nop>", opts)
+-- Unbind space in normal/visual mode to make leader work
+map("n", "<Space>", "<Nop>", opts)
+map("v", "<Space>", "<Nop>", opts)
 
 -- NERDTree mappings
-map("n", "<leader>nf", ":NERDTreeFocus<CR>", opts)
+map("n", "<leader>nF", ":NERDTreeFocus<CR>", opts)
 map("n", "<leader>nt", ":NERDTree<CR>", opts)
 map("n", "<leader>nn", ":NERDTreeToggle<CR>", opts)
 map("n", "<leader>nf", ":NERDTreeFind<CR>", opts)
