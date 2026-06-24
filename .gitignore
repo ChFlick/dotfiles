@@ -4,3 +4,10 @@
 .config/Code/
 !.config/Code/User/settings.json
 !.config/Code/User/keybindings.json
+
+# Local-only / machine-specific overrides (seeded from *.template by bootstrap)
+.gitconfig.local
+.gitconfig.local.private
+.zshrc.local
+profile.local.ps1
+windows/profile.local.ps1

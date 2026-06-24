@@ -1,0 +1,9 @@
+# Copy to ~/.gitconfig.local and fill in your identity.
+# This file is NOT committed (contains personal info).
+[user]
+  name = Your Name
+  email = you@example.com
+
+# Optional: platform diff/merge tools
+# [difftool "meld"]
+#   path = C:/Program Files/Meld/Meld.exe
