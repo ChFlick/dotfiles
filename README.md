@@ -75,12 +75,17 @@ seeded from `*.template` and listed in `.gitignore`:
 - **[llm-assets](https://github.com/ChFlick/llm-assets)** (private) — GitHub
   Copilot CLI assets: custom agents, hooks, skills, knowledge base, and
   instructions. It has its own `setup.ps1` that junction-links those folders into
-  `~/.copilot`. Kept separate (different access/lifecycle); the Windows bootstrap
-  can optionally pull it in:
+  `~/.copilot`. Kept separate (different access/lifecycle).
+
+  **Windows** can pull it in via the bootstrap:
 
   ```powershell
   pwsh -File windows\bootstrap.ps1 -WithLlmAssets
   ```
+
+  **macOS / Linux:** `llm-assets` currently ships only a Windows `setup.ps1`
+  (no `setup.sh` yet), so set it up manually — clone it and symlink
+  `agents/`, `hooks/`, `skills/`, `knowledgebase/` into `~/.copilot`.
 
 ## Editing shortcuts
 
