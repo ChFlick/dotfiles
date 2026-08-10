@@ -28,6 +28,7 @@ Then restart the shell (or `. $PROFILE`).
    |---|---|
    | `windows/Microsoft.PowerShell_profile.ps1` | `$PROFILE` |
    | `windows/colearn-instructions.md` | next to `$PROFILE` |
+   | `windows/coquiz-instructions.md` | next to `$PROFILE` |
    | `windows/starship.toml` | `%LOCALAPPDATA%\starship\starship.toml` |
    | `windows/gitconfig` | `~\.gitconfig` |
    | `.config/nvim` | `%LOCALAPPDATA%\nvim` |
@@ -48,6 +49,7 @@ Then restart the shell (or `. $PROFILE`).
 | `gitconfig.local.template` | Your name/email (**not committed**). |
 | `gitconfig.local.private.template` | Per-area credentials, e.g. Azure DevOps (**not committed**). |
 | `colearn-instructions.md` | Socratic-tutor prompt used by the `colearn` function. |
+| `coquiz-instructions.md` | Examiner prompt used by the `coquiz` function (test-my-knowledge mode). |
 
 ## Editing config
 

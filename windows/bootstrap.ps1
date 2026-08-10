@@ -183,6 +183,7 @@ Write-Step "Linking configuration"
 $profileDir = Split-Path $PROFILE -Parent
 Link-Item (Join-Path $WindowsDir 'Microsoft.PowerShell_profile.ps1') $PROFILE
 Link-Item (Join-Path $WindowsDir 'colearn-instructions.md') (Join-Path $profileDir 'colearn-instructions.md')
+Link-Item (Join-Path $WindowsDir 'coquiz-instructions.md') (Join-Path $profileDir 'coquiz-instructions.md')
 
 # Starship
 Link-Item (Join-Path $WindowsDir 'starship.toml') (Join-Path $env:LOCALAPPDATA 'starship\starship.toml')

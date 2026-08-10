@@ -157,11 +157,84 @@ function colearn {
     Set-Location $tmpDir
     try {
         Write-Host "Starting Copilot Learn Mode..." -ForegroundColor Cyan
-        copilot --alt-screen
+        copilot
     }
     finally {
         Set-Location $originalDir
         Remove-Item -Path $tmpDir -Recurse -Force -ErrorAction SilentlyContinue
         Write-Host "Learn mode session cleaned up." -ForegroundColor DarkGray
+    }
+}
+
+# coquiz: Copilot CLI in "examiner" test-my-knowledge mode (throwaway repo).
+# Tests how well you know a topic with application-focused questions.
+#   coquiz                              -> asks what to test
+#   coquiz "raft consensus"             -> pre-seeds the scope (positional)
+#   coquiz --scope "raft consensus"     -> same, via flag
+#   coquiz --scope "DDIA ch.5" --material .\ch5.pdf -> grounds questions in a file/folder
+function coquiz {
+    # Accepts Linux-style flags (--scope/--material, -s/-m) or positional args:
+    #   coquiz "raft consensus"
+    #   coquiz --scope "raft consensus" --material .\ch5.pdf
+    $Scope = $null
+    $Material = $null
+    $positional = @()
+    for ($i = 0; $i -lt $args.Count; $i++) {
+        switch -Regex ($args[$i]) {
+            '^(--scope|-s)$'    { $i++; $Scope = $args[$i] }
+            '^(--material|-m)$' { $i++; $Material = $args[$i] }
+            '^--scope=(.*)$'    { $Scope = $Matches[1] }
+            '^--material=(.*)$' { $Material = $Matches[1] }
+            default             { $positional += $args[$i] }
+        }
+    }
+    if (-not $Scope -and $positional.Count -ge 1)    { $Scope = $positional[0] }
+    if (-not $Material -and $positional.Count -ge 2) { $Material = $positional[1] }
+
+    $originalDir = Get-Location
+    $tmpDir = Join-Path ([System.IO.Path]::GetTempPath()) "coquiz-$(Get-Random)"
+    New-Item -ItemType Directory -Path $tmpDir -Force | Out-Null
+    $githubDir = Join-Path $tmpDir ".github"
+    New-Item -ItemType Directory -Path $githubDir -Force | Out-Null
+
+    $instructionsPath = Join-Path $PSScriptRoot "coquiz-instructions.md"
+    if (Test-Path $instructionsPath) {
+        Copy-Item $instructionsPath (Join-Path $githubDir "copilot-instructions.md")
+    } else {
+        Set-Content -Path (Join-Path $githubDir "copilot-instructions.md") `
+            -Value "# Examiner`nTest how well I know a topic. Ask one application-focused question at a time (apply, counterfactual, trade-offs, find-the-flaw, teach-back), assess each answer honestly, reveal correct answers, and give an end-of-session report. Rigorous but encouraging." `
+            -Encoding UTF8
+    }
+
+    # Optionally copy source material into the session so Copilot can read it.
+    $materialNote = ""
+    if ($Material) {
+        if (Test-Path $Material) {
+            $materialDir = Join-Path $tmpDir "material"
+            New-Item -ItemType Directory -Path $materialDir -Force | Out-Null
+            Copy-Item -Path $Material -Destination $materialDir -Recurse -Force
+            $materialNote = " Source material is in the ``material/`` folder — read it first and anchor your questions to it."
+        } else {
+            Write-Host "coquiz: material path not found: $Material" -ForegroundColor Yellow
+        }
+    }
+
+    Set-Location $tmpDir
+    try {
+        Write-Host "Starting Copilot Quiz Mode..." -ForegroundColor Cyan
+        if ($Scope) { Write-Host "Scope: $Scope" -ForegroundColor DarkGray }
+        # Pre-seed the scope as the opening message when given; otherwise the
+        # examiner asks what to test.
+        if ($Scope -or $materialNote) {
+            $seed = if ($Scope) { "Test my knowledge of: $Scope.$materialNote" } else { "Test my knowledge.$materialNote" }
+            copilot -i $seed
+        } else {
+            copilot
+        }
+    }
+    finally {
+        Set-Location $originalDir
+        Remove-Item -Path $tmpDir -Recurse -Force -ErrorAction SilentlyContinue
+        Write-Host "Quiz mode session cleaned up." -ForegroundColor DarkGray
     }
 }
