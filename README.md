@@ -19,9 +19,11 @@ My configuration files for **macOS, Linux, and Windows**.
 | Git | `.gitconfig` (+ `windows/gitconfig`), `.gitattributes`, `.ripgreprc` |
 | Terminal / tools | `.config/kitty/`, `.config/ranger/`, `.config/iterm2/` |
 | macOS-only | `.config/karabiner.edn`, `.config/linearmouse/` |
+| Package list | `.Brewfile` (installed by `yadm bootstrap` via `brew bundle --global`) |
 
 Tools assumed on the PATH: `nvim`, `eza`, `bat`, `delta`, `difft`, `fzf`,
-`zoxide`, `fd`, `ripgrep`, `starship`, `gh`.
+`zoxide`, `fd`, `ripgrep`, `starship`, `gh`. On macOS/Linux these all come from
+`.Brewfile`; on Windows the bootstrap installs them via winget/scoop.
 
 ## Install
 
@@ -36,6 +38,24 @@ brew install yadm
 yadm clone https://github.com/chflick/dotfiles.git
 yadm bootstrap
 ```
+
+`yadm bootstrap` is idempotent and takes care of the rest: submodules
+(powerlevel10k, git-toolbelt, ranger_devicons), `brew bundle --global` from
+`.Brewfile`, the goku service, the npm prefix, lazy.nvim plugin restore from the
+committed `lazy-lock.json`, fisher plugins, and seeding the local override
+files below.
+
+Two things it can't do for you:
+
+- **SSH key** — `.config/yadm/config` pushes with `~/.ssh/id_github_chflick`.
+  Create it and add the public half to GitHub:
+
+  ```sh
+  ssh-keygen -t ed25519 -f ~/.ssh/id_github_chflick
+  gh ssh-key add ~/.ssh/id_github_chflick.pub
+  ```
+
+- **Login shell** — pick one: `chsh -s "$(command -v fish)"` (or `zsh`).
 
 ### Linux
 
@@ -63,12 +83,14 @@ Full details (what it installs, how linking works, local overrides) are in
 ## Local / private overrides
 
 Identity and secrets are **never committed**. They live in local files that are
-seeded from `*.template` and listed in `.gitignore`:
+seeded by `yadm bootstrap` (macOS/Linux) or `windows\bootstrap.ps1`, and are
+listed in `.gitignore`:
 
 - `~/.gitconfig.local` — your name/email
 - `~/.gitconfig.local.private` — per-area credentials (e.g. Azure DevOps)
 - `~/.config/powershell/profile.local.ps1` — machine/work-specific PowerShell
 - `~/.zshrc.local` — machine/work-specific zsh
+- `~/.config/fish/config.local.fish` — machine/work-specific fish
 
 ## Related repositories
 
@@ -83,9 +105,16 @@ seeded from `*.template` and listed in `.gitignore`:
   pwsh -File windows\bootstrap.ps1 -WithLlmAssets
   ```
 
-  **macOS / Linux:** `llm-assets` currently ships only a Windows `setup.ps1`
-  (no `setup.sh` yet), so set it up manually — clone it and symlink
-  `agents/`, `hooks/`, `skills/`, `knowledgebase/` into `~/.copilot`.
+  **macOS / Linux:**
+
+  ```sh
+  git clone git@ghprivate:ChFlick/llm-assets.git ~/dev/llm-assets
+  cd ~/dev/llm-assets && ./setup.sh
+  ```
+
+  `setup.sh` detects macOS/Linux/WSL, installs Rust + `rtk`, and symlinks
+  `agents/`, `hooks/`, `skills/`, `knowledgebase/` and `copilot-instructions.md`
+  into `~/.copilot`.
 
 ## Editing shortcuts
 

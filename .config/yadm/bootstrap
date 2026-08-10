@@ -1,26 +1,143 @@
 #!/bin/bash
+#
+# yadm bootstrap — macOS / Linux post-clone setup.
+#
+#   yadm clone https://github.com/chflick/dotfiles.git
+#   yadm bootstrap
+#
+# Every step is idempotent, so re-running is safe.
 
-cd $HOME
+set -u
+cd "$HOME" || exit 1
 
 system_type=$(uname -s)
 
-if [ "$system_type" = "Darwin" ]; then
-  echo "Executing mac installation..."
-  echo "Initializing submodules"
-  yadm submodule update --force --init --recursive --jobs 4
+info() { printf '\033[0;36m==> %s\033[0m\n' "$1"; }
+ok()   { printf '\033[0;32m    [ok] %s\033[0m\n' "$1"; }
+skip() { printf '\033[0;90m    [--] %s\033[0m\n' "$1"; }
+warn() { printf '\033[0;33m    [!]  %s\033[0m\n' "$1"; }
 
-  echo "Installing brew bundle"
-  brew bundle --global
+info "Bootstrapping dotfiles on $system_type"
 
-  # Start brew services
-  echo "Starting goku"
-  brew services start yqrashawn/goku/goku
-
-  # npm config
-  echo "prefix=~/.npm-packages" >> ~/.npmrc
-
-  # nvim config
-  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  nvim --headless -c 'TSInstallSync! typescript javascript tsx html yaml toml json jsonc python jsdoc lua bash vim scss astro markdown markdown_inline' -c quit
+# ---------------------------------------------------------------------------
+# Submodules — powerlevel10k, git-toolbelt, ranger_devicons
+# .zshrc sources ~/powerlevel10k and .profile adds ~/git-toolbelt to PATH,
+# so this must run on every platform, not just macOS.
+# ---------------------------------------------------------------------------
+info "Initializing submodules"
+if yadm submodule update --force --init --recursive --jobs 4; then
+  ok "submodules ready"
+else
+  warn "submodule update failed — run 'yadm submodule update --init --recursive' manually"
 fi
+
+# ---------------------------------------------------------------------------
+# Local, machine-specific override files (git-ignored, never committed)
+# ---------------------------------------------------------------------------
+seed() {
+  template="$1"
+  dest="$2"
+  if [ -e "$dest" ]; then
+    skip "$(basename "$dest") already exists"
+  elif [ -n "$template" ] && [ -f "$template" ]; then
+    mkdir -p "$(dirname "$dest")"
+    cp "$template" "$dest" && ok "seeded $(basename "$dest") — fill in your details"
+  else
+    mkdir -p "$(dirname "$dest")"
+    : > "$dest" && ok "created empty $(basename "$dest")"
+  fi
+}
+
+info "Seeding local override files"
+seed "$HOME/windows/gitconfig.local.template"         "$HOME/.gitconfig.local"
+seed "$HOME/windows/gitconfig.local.private.template" "$HOME/.gitconfig.local.private"
+seed ""                                               "$HOME/.zshrc.local"
+seed ""                                               "$HOME/.config/fish/config.local.fish"
+
+# ---------------------------------------------------------------------------
+# Homebrew packages (~/.Brewfile)
+# ---------------------------------------------------------------------------
+if command -v brew >/dev/null 2>&1; then
+  if [ -f "$HOME/.Brewfile" ]; then
+    info "Installing Homebrew bundle from ~/.Brewfile"
+    brew bundle --global && ok "brew bundle complete"
+  else
+    warn "no ~/.Brewfile found — skipping brew bundle"
+  fi
+else
+  skip "Homebrew not installed — skipping brew bundle"
+  if [ "$system_type" = "Darwin" ]; then
+    warn "install it first: /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  fi
+fi
+
+# ---------------------------------------------------------------------------
+# macOS-only: goku compiles .config/karabiner.edn into karabiner.json
+# ---------------------------------------------------------------------------
+if [ "$system_type" = "Darwin" ]; then
+  if command -v goku >/dev/null 2>&1; then
+    info "Starting goku service"
+    brew services start yqrashawn/goku/goku >/dev/null 2>&1 && ok "goku running"
+  else
+    skip "goku not installed — karabiner.edn will not be compiled"
+  fi
+fi
+
+# ---------------------------------------------------------------------------
+# npm prefix (appending blindly would duplicate the line on every run)
+# ---------------------------------------------------------------------------
+if command -v npm >/dev/null 2>&1; then
+  info "Configuring npm prefix"
+  if grep -qs '^prefix=' "$HOME/.npmrc"; then
+    skip "npm prefix already set"
+  else
+    echo "prefix=~/.npm-packages" >> "$HOME/.npmrc" && ok "npm prefix -> ~/.npm-packages"
+  fi
+else
+  skip "npm not installed — skipping npm prefix"
+fi
+
+# ---------------------------------------------------------------------------
+# Neovim — .config/nvim uses lazy.nvim, which bootstraps itself on first run.
+# lazy-lock.json is committed, so restore pinned versions when it is present.
+# ---------------------------------------------------------------------------
+if command -v nvim >/dev/null 2>&1; then
+  info "Syncing Neovim plugins (lazy.nvim)"
+  if [ -f "$HOME/.config/nvim/lazy-lock.json" ]; then
+    nvim --headless "+Lazy! restore" +qa >/dev/null 2>&1
+  else
+    nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1
+  fi
+  nvim --headless "+TSUpdateSync" +qa >/dev/null 2>&1
+  ok "Neovim plugins synced"
+else
+  skip "nvim not installed — skipping plugin sync"
+fi
+
+# ---------------------------------------------------------------------------
+# fish plugins (fish_plugins is committed; fisher installs from it)
+# ---------------------------------------------------------------------------
+if command -v fish >/dev/null 2>&1; then
+  info "Installing fish plugins (fisher)"
+  if fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher update' >/dev/null 2>&1; then
+    ok "fish plugins installed"
+  else
+    warn "fisher install failed — run it manually inside fish"
+  fi
+else
+  skip "fish not installed — skipping fisher"
+fi
+
+# ---------------------------------------------------------------------------
+# SSH key used by yadm itself (.config/yadm/config core.sshCommand) and the
+# 'dof' alias. Without it, pushing dotfiles back to GitHub will fail.
+# ---------------------------------------------------------------------------
+if [ ! -f "$HOME/.ssh/id_github_chflick" ]; then
+  warn "~/.ssh/id_github_chflick is missing — yadm and the 'dof' alias push with it"
+  warn "create it:  ssh-keygen -t ed25519 -f ~/.ssh/id_github_chflick"
+  warn "then add the .pub key at https://github.com/settings/keys"
+fi
+
+info "Bootstrap complete"
+echo "Next: set your login shell if you want zsh or fish, e.g."
+echo "  chsh -s \"\$(command -v fish)\""

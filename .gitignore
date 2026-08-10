@@ -9,5 +9,6 @@
 .gitconfig.local
 .gitconfig.local.private
 .zshrc.local
+.config/fish/config.local.fish
 profile.local.ps1
 windows/profile.local.ps1

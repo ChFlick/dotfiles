@@ -1,17 +1,22 @@
 . ~/.config/fish/aliases.fish
-. ~/.config/fish/config.local.fish
+test -e ~/.config/fish/config.local.fish; and . ~/.config/fish/config.local.fish
 
-set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
+# fish_user_paths is universal, so guard against re-appending on every shell.
+if test -d /opt/homebrew/bin; and not contains /opt/homebrew/bin $fish_user_paths
+    set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
+end
 set fish_greeting ''
 
 set -x GPG_TTY (tty)
-gpgconf --launch gpg-agent
+if command -v gpgconf >/dev/null
+    gpgconf --launch gpg-agent
+end
 
 set -gx VISUAL nvim
 set -gx EDITOR nvim
 set -gx VOLTA_HOME $HOME/.volta
 
-set PATH /Users/christoph.flick/.npm-packages/bin/ $PATH
+set PATH $HOME/.npm-packages/bin $PATH
 
 set -x TOAST_GIT $HOME/toast/git-repos
 set -x RIPGREP_CONFIG_PATH $HOME/.ripgreprc
@@ -29,10 +34,9 @@ set -g FZF_ALT_C_OPTS '--preview "tree -C {} | head -100"'
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-if status is-login
-  ssh-add -q --apple-load-keychain
+if status is-login; and test (uname) = Darwin
+    ssh-add -q --apple-load-keychain
 end
 
-# Created by `pipx` on 2024-05-31 11:55:51
-set PATH $PATH /Users/christoph.flick/.local/bin
-zoxide init fish | source
+set PATH $PATH $HOME/.local/bin
+command -v zoxide >/dev/null; and zoxide init fish | source
